@@ -1,0 +1,51 @@
+.atf-section {
+  min-height: 100vh;
+}
+
+.atf-inner {
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.atf-left,
+.atf-right {
+  flex: 1;
+  position: relative;
+}
+
+.atf-ellipse {
+  position: absolute;
+  top: -140px;
+  left: -199px;
+  width: 892px;
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+.atf-portrait {
+  position: absolute;
+  right: -120px;
+  bottom: 0;
+  height: 700px;
+  width: auto;
+  z-index: 1;
+}
+
+.atf-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 140px;
+}
+.atf-text {
+  color: var(--color-accent);
+  text-align: left;
+}
+p {
+  font-family: 'Baloo p';
+  font-size: 64px;
+  font-weight: lighter;
+  margin: 0 0 -14px 4px;
+}

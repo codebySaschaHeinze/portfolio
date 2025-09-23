@@ -1,26 +1,39 @@
+* {
+  margin: 0;
+}
+
 @font-face {
-  font-family: 'Baloo 2';
-  src: url('/fonts/baloo-2-v23-latin-regular.woff2') format('woff2'),
-    url('/fonts/Baloo2-VariableFont_wght.ttf') format('truetype');
-  font-weight: 400 800;
-  font-style: normal;
   font-display: swap;
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/baloo-2-v23-latin-800.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Baloo p';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/baloo-2-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 @font-face {
   font-family: 'Montserrat';
   src: url('/fonts/montserrat-v31-latin-regular.woff2') format('woff2'),
     url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-h1,
-h2 {
-  font-family: 'Baloo 2', system-ui, sans-serif;
+:root {
+  --color-accent: #0043f0;
 }
-body {
-  font-family: 'Montserrat', system-ui, sans-serif;
-  line-height: 1.6;
+h1 {
+  font-family: 'Baloo 2';
+  font-size: 128px;
+  font-weight: 900;
+  line-height: 0.8;
+  margin: 0;
 }
