@@ -1,51 +1,53 @@
 .atf-section {
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .atf-inner {
   max-width: 1440px;
-  height: 100vh;
+  height: 100dvh;
+  margin-inline: auto;
   display: flex;
   flex-direction: row;
 }
 
 .atf-left,
 .atf-right {
-  flex: 1;
+  flex: 0 0 50%;
   position: relative;
 }
 
+/* links */
 .atf-ellipse {
   position: absolute;
   top: -140px;
   left: -199px;
   width: 892px;
   height: auto;
-  pointer-events: none;
   z-index: 0;
+  overflow: hidden;
 }
 .atf-portrait {
   position: absolute;
-  right: -120px;
+  margin-left: 80px;
   bottom: 0;
-  height: 700px;
+  height: 670px;
   width: auto;
   z-index: 1;
 }
 
+/* rechts */
 .atf-right {
   display: flex;
-  align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 140px;
+  margin-top: 150px;
 }
 .atf-text {
   color: var(--color-accent);
   text-align: left;
 }
-p {
-  font-family: 'Baloo p';
-  font-size: 64px;
-  font-weight: lighter;
-  margin: 0 0 -14px 4px;
+.atf-text p {
+  font-family: 'Baloo 2';
+  font-weight: 100;
+  font-size: 58px;
+  margin: 0 0 0px 4px;
 }
