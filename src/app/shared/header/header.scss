@@ -1,0 +1,69 @@
+:host {
+  position: fixed;
+  inset: 0 auto auto 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.site-header {
+  height: var(--header-h, 72px);
+}
+
+.header-inner {
+  max-width: 1440px;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 23px;
+}
+
+.header-right,
+.header-left {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  display: flex;
+  gap: 80px;
+  list-style: none;
+}
+
+.nav-list a,
+.lang-switch a {
+  text-decoration: none;
+  color: inherit;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+}
+
+.lang-switch .active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
