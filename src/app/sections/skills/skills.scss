@@ -34,19 +34,22 @@
       width: 72px;
       height: auto;
       object-fit: contain;
+      transition: transform 0.25s ease, filter 0.25s ease;
     }
 
     img:hover {
-      transform: scale(1.03);
-      filter: drop-shadow(0 0 7px rgb(255, 255, 255, 0.4));
+      transform: scale(1.03) translateY(-6px);
+      filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.4));
+    }
+
+    img:hover + .skill-name {
+      font-weight: 900;
+      transition: font-weight 0.25s ease;
     }
 
     .skill-name {
       margin-top: 8px;
       font-size: 0.95rem;
-    }
-
-    span {
       font-family: 'Montserrat';
       color: white;
       font-size: 16px;
