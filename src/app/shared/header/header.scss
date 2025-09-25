@@ -32,6 +32,11 @@
   align-items: center;
 }
 
+.logo:hover {
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 7px rgb(255, 255, 255, 0.2));
+}
+
 .header-right {
   display: flex;
   align-items: center;
