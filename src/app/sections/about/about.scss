@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   margin-inline: auto;
+  margin-bottom: 60px;
 
   .big-ellipse {
     position: absolute;
@@ -25,11 +26,11 @@
 
   .about-left,
   .about-right {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
     position: relative;
-    margin: 170px 30px;
+    margin: 170px 30px 0px 30px;
   }
-  // linke Seite
+
   .about-left {
     display: flex;
     flex-direction: column;
@@ -40,15 +41,15 @@
     h3 {
       font-family: 'Baloo 2';
       color: #5988ff;
-      font-size: 121px;
-      line-height: 0.9;
-      margin-bottom: 30px;
+      font-size: 100px;
+      line-height: 1;
+      margin-bottom: 50px;
     }
 
     h4 {
       font-family: 'Baloo 2';
       color: #5988ff;
-      font-size: 45px;
+      font-size: 42px;
       text-align: center;
     }
 
@@ -73,7 +74,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 0px;
         padding: 30px;
       }
     }
@@ -90,6 +91,9 @@
     .img-1 {
       width: 32.5px;
       height: 40px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       background-image: url('/icons/location-default.png');
     }
     .img-1:hover {
@@ -101,7 +105,10 @@
       position: relative;
       width: 56px;
       height: 49.1px;
-      top: -5px;
+      top: -6px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
       background-image: url('/icons/remote-default.png');
     }
     .img-2:hover {
@@ -109,15 +116,15 @@
       background-image: url('/icons/remote-hover.png');
     }
   }
-  // rechte Seite
+
   .about-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 60px;
+    gap: 90px;
     margin-right: 50px;
-    margin-bottom: 210px;
+    margin-bottom: 60px;
 
     p {
       font-family: 'Montserrat';
@@ -145,6 +152,7 @@
         position: relative;
         z-index: 1;
         transition: color 0.12s ease;
+        font-size: 21px;
       }
 
       &::before {
@@ -162,7 +170,7 @@
       }
 
       &:hover {
-        transform: scale(1.05);
+        transform: scale(1.02);
 
         p {
           color: #fff;

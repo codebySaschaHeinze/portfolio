@@ -1,0 +1,11 @@
+<section class="skills-section" aria-label="Fähigkeiten">
+  <h3>Skills</h3>
+  <ul class="skill-ul">
+    @for (skill of skills; track skill.name) {
+    <li class="skill-li">
+      <img [src]="skill.icon" [alt]="skill.name" />
+      <span class="skill-name">{{ skill.name }}</span>
+    </li>
+    }
+  </ul>
+</section>
