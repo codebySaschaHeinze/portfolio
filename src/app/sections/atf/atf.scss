@@ -1,5 +1,5 @@
 .atf-section {
-  min-height: 100dvh;
+  min-height: 100vh;
   max-width: 100vw;
   background: linear-gradient(to bottom, #ffffff 0%, #d3e3fa 100%);
   z-index: 1;
@@ -56,7 +56,7 @@
 .header-social-buttons {
   position: absolute;
   width: 40px;
-  right: 24px;
+  right: 54px;
   bottom: 24px;
   display: flex;
   flex-direction: column; /* untereinander */
@@ -93,4 +93,28 @@
 }
 .img-3:hover {
   background-image: url('/icons/linkedin-hover.png');
+}
+
+.atf-scroll-and-divider {
+  position: absolute;
+  left: 38%;
+  bottom: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    font-family: 'Baloo 2';
+    font-weight: 100;
+    font-size: 23px;
+    color: var(--color-accent);
+    margin-bottom: 12px;
+  }
+
+  .divider {
+    width: 2px;
+    height: 200px;
+    background: var(--color-accent);
+  }
 }
