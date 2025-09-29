@@ -4,20 +4,30 @@
   margin: 0 auto;
   display: flex;
   overflow-x: clip;
+  flex-direction: column;
 
   .h3-and-p {
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 200px 60px;
-    width: 20%;
+    width: 700px;
 
     h3 {
       font-family: 'Baloo 2';
       color: #5988ff;
       font-size: 96px;
       line-height: 0.9;
+      text-align: left;
+      margin-left: 58px;
+      margin-bottom: 60px;
+    }
+
+    p {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      font-size: 23px;
+      margin-left: 60px;
     }
   }
 
@@ -69,5 +79,20 @@
     height: 96px;
     top: 2000px;
     margin-left: 500px;
+  }
+
+  .work-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .works-left,
+  .works-right {
+    flex: 1;
   }
 }
