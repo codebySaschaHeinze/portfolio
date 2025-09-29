@@ -17,7 +17,9 @@
         <h4>{{ project.title }}</h4>
         <span>{{ project.set.join(' | ') }}</span>
         <p>{{ project.description }}</p>
-        <button type="button" (click)="openGithub(project.github)">GitHub</button>
+        <button type="button" (click)="openGithub(project.githubLink)" class="btn">
+          <span class="btn-label">{{ project.github || 'GitHub' }}</span>
+        </button>
       </div>
     </div>
     }
@@ -28,6 +30,6 @@
   <img class="big-ellipse ellipse3" src="icons/ellipse-blue.png" alt="" />
   <img class="big-ellipse ellipse4" src="icons/ellipse-blue.png" alt="" />
   <img class="big-ellipse ellipse5" src="icons/ellipse-blue.png" alt="" />
-  <img class="big-ellipse ellipse6" src="icons/ellipse-blue.png" alt="" />
-  <img class="big-ellipse ellipse7" src="icons/ellipse-blue.png" alt="" />
+  <!-- <img class="big-ellipse ellipse6" src="icons/ellipse-blue.png" alt="" />
+  <img class="big-ellipse ellipse7" src="icons/ellipse-blue.png" alt="" /> -->
 </section>

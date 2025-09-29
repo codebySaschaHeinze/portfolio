@@ -10,4 +10,5 @@ export interface Project {
   set: string[];
   description: string;
   github: string;
+  githubLink: string;
 }
