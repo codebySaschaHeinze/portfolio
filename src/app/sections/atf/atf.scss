@@ -1,23 +1,24 @@
 .atf-section {
   position: relative;
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   background: linear-gradient(to bottom, #ffffff 0%, #d3e3fa 100%);
   z-index: 5;
+  overflow-x: clip;
 }
 
 .atf-left,
 .atf-right {
-  flex: 0 0 720px;
+  flex: 0 0 50%;
 }
 
 .atf-ellipse {
   position: absolute;
-  top: -140px;
-  left: -220px;
+  top: -20%;
+  left: -10%;
   width: 892px;
   height: auto;
   z-index: 1;
