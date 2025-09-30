@@ -12,3 +12,10 @@ export interface Project {
   github: string;
   githubLink: string;
 }
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  project: string;
+  text: string;
+}
