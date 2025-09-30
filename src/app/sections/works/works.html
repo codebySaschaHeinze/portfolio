@@ -8,7 +8,7 @@
   </div>
 
   <div class="works-container">
-    @for (project of projects; track project.id) {
+    @for (project of projects; track project.idP) {
     <div class="work-row" [class.reverse]="$index % 2 === 1">
       <div class="works-left">
         <a><img [src]="project.projectImg" [alt]="project.title" /></a>

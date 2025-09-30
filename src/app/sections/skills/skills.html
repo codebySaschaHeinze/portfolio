@@ -1,10 +1,10 @@
 <section id="skills" class="skills-section" aria-label="Fähigkeiten">
   <h3>Skills</h3>
   <ul class="skill-ul">
-    @for (skill of skills; track skill.name) {
+    @for (skill of skills; track skill.nameS) {
     <li class="skill-li">
-      <img [src]="skill.icon" [alt]="skill.name" />
-      <span class="skill-name">{{ skill.name }}</span>
+      <img [src]="skill.icon" [alt]="skill.nameS" />
+      <span class="skill-name">{{ skill.nameS }}</span>
     </li>
     }
   </ul>

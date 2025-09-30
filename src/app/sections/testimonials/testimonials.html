@@ -5,9 +5,9 @@
   </div>
 
   <div class="testimonials-container">
-    @for (testimonial of testimonials; track testimonial.id) {
+    @for (testimonial of testimonials; track testimonial.idT) {
     <div class="testimonial-single">
-      <h4>{{ testimonial.name }}</h4>
+      <h4>{{ testimonial.nameT }}</h4>
       <span class="project-span">Projekt {{ testimonial.project }}</span>
       <p>"{{ testimonial.text }}"</p>
     </div>

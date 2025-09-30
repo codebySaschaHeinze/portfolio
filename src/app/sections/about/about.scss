@@ -27,19 +27,6 @@
     left: 65%;
   }
 
-  .big-ellipse,
-  .small-ellipse {
-    transition: transform 0.25s ease;
-  }
-
-  .big-ellipse:hover {
-    transform: scale(1.03);
-  }
-
-  .small-ellipse:hover {
-    transform: scale(1.04);
-  }
-
   .about-left,
   .about-right {
     flex: 0 0 40%;

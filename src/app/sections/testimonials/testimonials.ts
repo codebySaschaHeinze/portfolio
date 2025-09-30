@@ -10,20 +10,20 @@ import { Project, Testimonial } from './../../interfaces/interfaces';
 export class Testimonials {
   testimonials: Testimonial[] = [
     {
-      id: 1,
-      name: 'Daniel Luzius',
+      idT: 1,
+      nameT: 'Daniel Luzius',
       project: 'Kochwelt',
       text: 'Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen.',
     },
     {
-      id: 2,
-      name: 'Patrick Schmidt',
+      idT: 2,
+      nameT: 'Patrick Schmidt',
       project: 'Kochwelt',
-      text: 'Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen.',
+      text: '"Sascha brachte in Teamarbeiten dank seiner kreativen Impulse, seiner Konzentrationsstärke und seines breiten Wissens einen besonderen Mehrwert ein."',
     },
     {
-      id: 3,
-      name: 'Pamela Anderson',
+      idT: 3,
+      nameT: 'Pamela Anderson',
       project: 'BeachApp',
       text: 'Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen.',
     },

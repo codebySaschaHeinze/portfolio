@@ -1,10 +1,10 @@
 export interface Skill {
-  name: string;
+  nameS: string;
   icon: string;
 }
 
 export interface Project {
-  id: number;
+  idP: number;
   projectImg: string;
   title: string;
   set: string[];
@@ -14,8 +14,8 @@ export interface Project {
 }
 
 export interface Testimonial {
-  id: number;
-  name: string;
+  idT: number;
+  nameT: string;
   project: string;
   text: string;
 }

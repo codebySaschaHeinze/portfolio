@@ -10,7 +10,7 @@ import { Project } from './../../interfaces/interfaces';
 export class Works {
   projects: Project[] = [
     {
-      id: 1,
+      idP: 1,
       projectImg: 'imgs/elpolloloco.png',
       title: 'El Pollo Loco',
       set: ['JavaScript', 'HTML', 'CSS'],
@@ -21,7 +21,7 @@ export class Works {
     },
 
     {
-      id: 2,
+      idP: 2,
       projectImg: 'imgs/pokedex.png',
       title: 'PokeDex',
       set: ['JavaScript', 'API', 'HTML', 'CSS'],
@@ -32,7 +32,7 @@ export class Works {
     },
 
     {
-      id: 2,
+      idP: 3,
       projectImg: 'imgs/placeholder.png',
       title: 'FutureApp',
       set: ['JavaScript', 'API', 'HTML', 'CSS'],
