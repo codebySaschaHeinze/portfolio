@@ -27,14 +27,14 @@
 .atf-portrait {
   position: absolute;
   bottom: 0;
-  height: 670px;
+  height: 750px;
   width: auto;
   z-index: 2;
 }
 
 .atf-left {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
 }
 
 .atf-right {
