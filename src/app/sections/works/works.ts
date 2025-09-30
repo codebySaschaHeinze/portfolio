@@ -30,6 +30,17 @@ export class Works {
       github: 'GitHub',
       githubLink: 'https://github.com/codebySaschaHeinze/PokeDex.git',
     },
+
+    {
+      id: 2,
+      projectImg: 'imgs/placeholder.png',
+      title: 'FutureApp',
+      set: ['JavaScript', 'API', 'HTML', 'CSS'],
+      description:
+        'Ein weiteres Projekt wird demnächst ergänzt und hier vorgestellt. Es befindet sich aktuell noch in Vorbereitung und wird nach Fertigstellung mit Beschreibung, Inhalten und passender Darstellung präsentiert. Bis dahin bleibt dieser Bereich als Platzhalter bestehen.',
+      github: 'GitHub',
+      githubLink: 'https://github.com/codebySaschaHeinze',
+    },
   ];
 
   openGithub(url: string) {
