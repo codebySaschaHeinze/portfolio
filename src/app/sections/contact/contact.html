@@ -1,4 +1,4 @@
-<section class="contact-section">
+<section id="contact" class="contact-section">
   <div class="contact-left">
     <h3>Kontakt</h3>
     <h4>Etwas, das gelöst werden will?</h4>
@@ -15,12 +15,15 @@
   <div class="contact-right">
     <input type="text" placeholder="Dein Name" />
     <input type="text" placeholder="Deine Email" />
-    <input type="text" placeholder="Deine Nachricht" />
+
+    <textarea id="msg" name="message" placeholder="Deine Nachricht"></textarea>
     <div class="contact-right-check-box">
-      <input type="checkbox" name="" id="contact-check-box" />
-      <p>Ich habe die</p>
-      <a href="private-policy">Datenschutzerklärung</a>
-      <p>gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.</p>
+      <input type="checkbox" id="contact-check-box" />
+      <label for="contact-check-box" class="consent">
+        Ich habe die
+        <a href="/privacy-policy" target="_blank" rel="noopener">Datenschutzerklärung</a>
+        gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.
+      </label>
     </div>
     <button>Sag' Hallo</button>
   </div>

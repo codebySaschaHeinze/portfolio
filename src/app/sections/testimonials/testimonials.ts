@@ -19,7 +19,7 @@ export class Testimonials {
       idT: 2,
       nameT: 'Patrick Schmidt',
       project: 'Kochwelt',
-      text: '"Sascha brachte in Teamarbeiten dank seiner kreativen Impulse, seiner Konzentrationsstärke und seines breiten Wissens einen besonderen Mehrwert ein."',
+      text: 'Sascha brachte in Teamarbeiten dank seiner kreativen Impulse, seiner Konzentrationsstärke und seines breiten Wissens einen besonderen Mehrwert ein.',
     },
     {
       idT: 3,
