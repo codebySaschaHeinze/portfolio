@@ -5,7 +5,7 @@
   z-index: 6;
 }
 
-.site-header {
+.header-section {
   height: 72px;
 }
 
@@ -47,6 +47,10 @@
   gap: 5%;
 }
 
+.burger-menu {
+  display: none;
+}
+
 .nav-list {
   display: flex;
   justify-content: center;
@@ -83,10 +87,30 @@
 }
 
 @media (max-width: 1000px) {
-  .header-right {
+  .nav-list,
+  .lang-switch {
     display: none;
   }
   .header-left {
     margin: 0;
+
+    img {
+      height: clamp(80px, 10vw, 128px);
+      width: auto;
+    }
+  }
+
+  .header-right {
+    margin: 0;
+
+    img {
+      height: clamp(50px, 4vw, 128px);
+      width: auto;
+    }
+  }
+
+  .burger-menu {
+    display: block;
+    padding-left: 290px;
   }
 }
