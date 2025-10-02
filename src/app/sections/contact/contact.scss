@@ -1,6 +1,6 @@
 .contact-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
   padding: 48px 16px;
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
@@ -9,12 +9,11 @@
     flex-direction: row;
     align-items: stretch;
     gap: 40px;
-    padding: 64px 24px;
+    padding: 64px 0;
   }
 }
 
 .contact-left {
-  flex: 1 1 0;
   display: grid;
   align-items: center;
   justify-content: start;
@@ -70,14 +69,12 @@
     color: #5988ff;
   }
 
-  /* erster Chip: Montserrat */
   .contact-left-contact-me > span:first-of-type {
     font-family: 'Montserrat', system-ui, sans-serif;
     font-weight: 100;
     font-size: 16px;
   }
 
-  /* zweiter Chip: Baloo 2 */
   .contact-left-contact-me > span:last-of-type {
     font-family: 'Baloo 2', system-ui, sans-serif;
     font-weight: 600;
@@ -96,6 +93,7 @@
 .contact-right > input,
 .contact-right > textarea {
   width: 100%;
+  max-width: 100%; /* verhindert horizontales Vergrößern */
   box-sizing: border-box;
   padding: 12px 14px;
   border: 2px solid #5988ff;
@@ -106,76 +104,76 @@
   outline: none;
 
   &::placeholder {
-    color: #000000;
+    color: #000;
   }
-
   &:focus {
     border: 3px solid #5988ff;
   }
+}
 
-  .contact-right > textarea {
-    max-height: 80px;
-    max-width: 100px;
-    resize: vertical;
+.contact-right > textarea {
+  min-height: 120px;
+  max-height: 60vh;
+  resize: vertical;
+  overflow: auto;
+}
+
+.contact-right-check-box {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  font-size: 23px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 16px;
+  color: black;
+
+  input[type='checkbox'] {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #5988ff;
+    border-color: #5988ff;
   }
 
-  .contact-right-check-box {
-    font-family: 'Montserrat', system-ui, sans-serif;
-    font-size: 23px;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 0.95rem;
-    color: black;
-
-    input[type='checkbox'] {
-      flex: 0 0 auto;
-      width: 18px;
-      height: 18px;
-      margin-top: 2px;
-      accent-color: #5988ff;
-      border-color: #5988ff;
-    }
-
-    a {
-      color: #5988ff;
-      text-decoration: none;
-      font-family: 'Montserrat', system-ui, sans-serif;
-      font-size: 16px;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    p {
-      margin: 0;
-    }
-  }
-
-  button {
-    align-self: flex-start;
-    padding: 12px 18px;
-    border: 1px solid #5988ff;
-    border-radius: 10px;
-    background: transparent;
+  a {
     color: #5988ff;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.15s ease, background-color 0.15s ease;
+    text-decoration: none;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    font-size: 16px;
 
     &:hover {
-      transform: scale(1.03);
-      background: color-mix(in srgb, #5988ff 99%, transparent);
-    }
-    &:focus-visible {
-      outline: 3px solid #5988ff;
-      outline-offset: 2px;
+      text-decoration: underline;
     }
   }
 
-  .contact-section {
-    max-width: 100%;
-    margin: 0 auto;
+  p {
+    margin: 0;
   }
+}
+
+button {
+  align-self: flex-start;
+  padding: 12px 18px;
+  border: 1px solid #5988ff;
+  border-radius: 10px;
+  background: transparent;
+  color: #5988ff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+
+  &:hover {
+    transform: scale(1.03);
+    background: color-mix(in srgb, #5988ff 99%, transparent);
+  }
+  &:focus-visible {
+    outline: 3px solid #5988ff;
+    outline-offset: 2px;
+  }
+}
+
+.contact-section {
+  max-width: 100%;
+  margin: 0 auto;
 }

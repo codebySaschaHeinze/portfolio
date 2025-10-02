@@ -64,14 +64,16 @@
         margin: 40px 0 0;
       }
     }
+
+    @media (max-width: 1150px) {
+      .testimonials-container {
+        flex-direction: row;
+      }
+      .testimonial-single {
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+      }
+    }
   }
 }
-
-// @media (max-width: 700px) {
-//   .testimonial-section {
-//     padding: 0 24px 24px;
-//   }
-//   .testimonial-section .testimonials-container {
-//     gap: 16px;
-//   }
-// }
