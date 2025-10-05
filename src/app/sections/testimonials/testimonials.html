@@ -4,7 +4,7 @@
     <span>Das sagen meine Kollegen über mich</span>
   </div>
 
-  <div class="testimonials-container">
+  <div class="testimonials-container" aria-label="Testimonials" role="region" tabindex="0">
     @for (testimonial of testimonials; track testimonial.idT) {
     <div class="testimonial-single">
       <h4>{{ testimonial.nameT }}</h4>

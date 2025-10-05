@@ -1,16 +1,9 @@
 .contact-section {
   display: flex;
   flex-direction: row;
-
-  padding: 48px 16px;
+  max-width: 1440px;
+  padding: 48px 100px;
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
-
-  @media (min-width: 820px) {
-    flex-direction: row;
-    align-items: stretch;
-    gap: 40px;
-    padding: 64px 0;
-  }
 }
 
 .contact-left {
@@ -18,32 +11,25 @@
   align-items: center;
   justify-content: start;
   border-radius: 12px;
-  margin-left: 5.55%;
+  margin: 0 5.55% 0 5.55%;
 
   h3 {
     font-family: 'Baloo 2';
     color: #5988ff;
-    font-size: 96px;
+    font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
     line-height: 0.9;
     text-align: left;
     margin: 0;
-
     margin-bottom: 60px;
   }
 
   h4 {
     font-family: 'Baloo 2';
     color: #5988ff;
-    font-size: 45px;
+    font-size: clamp(23px, calc(23px + 9 * ((100vw - 320px) / 380)), 32px);
     margin: 0;
     align-self: left;
     margin-bottom: 30px;
-  }
-
-  span {
-    font-family: 'Montserrat';
-    color: #5988ff;
-    font-size: 23px;
   }
 
   p {
@@ -54,10 +40,7 @@
   }
 
   .contact-left-contact-me {
-    display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-
     justify-content: flex-start;
     align-items: center;
     margin: 0;
@@ -87,13 +70,13 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
-  padding-right: 5.55%;
+  padding: 0 0 0 5.55%;
 }
 
 .contact-right > input,
 .contact-right > textarea {
   width: 100%;
-  max-width: 100%; /* verhindert horizontales Vergrößern */
+  max-width: 100%;
   box-sizing: border-box;
   padding: 12px 14px;
   border: 2px solid #5988ff;
@@ -176,4 +159,17 @@ button {
 .contact-section {
   max-width: 100%;
   margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+    padding: 64px 5.55% 64px 0;
+  }
+
+  .contact-right {
+    gap: 27px;
+  }
 }
