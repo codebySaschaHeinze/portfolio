@@ -12,27 +12,31 @@
     gap: 16px 24px;
     justify-content: center;
     padding: 0;
-    margin: 5% 10% 8% 10%;
+    margin: 5% 10% 3% 10%;
     list-style: none;
   }
 
   h3 {
     font-family: 'Baloo 2';
     color: #ffffff;
-    font-size: 96px;
+    font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
     line-height: 0.9;
-    padding: 60px;
+    padding: 60px 5.55% 60px 5.55%;
   }
 
   .skill-li {
-    flex: 0 1 120px;
+    flex: 1 1 120px;
     display: grid;
     place-items: center;
     text-align: center;
     margin-bottom: 30px;
 
+    @media (max-width: 700px) {
+      flex: 0 0 80px;
+    }
+
     img {
-      width: 72px;
+      width: clamp(60px, calc(60px + 10 * ((100vw - 320px) / 380)), 70px);
       height: auto;
       object-fit: contain;
       transition: transform 0.25s ease, filter 0.25s ease;

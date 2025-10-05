@@ -23,7 +23,7 @@ export class Testimonials {
     },
     {
       idT: 3,
-      nameT: 'Pamela Anderson',
+      nameT: 'David Hasselhoff',
       project: 'BeachApp',
       text: 'Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen.',
     },
