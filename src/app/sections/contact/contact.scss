@@ -1,24 +1,65 @@
 .contact-section {
+  position: relative;
   display: flex;
   flex-direction: row;
+  overflow-x: clip;
   max-width: 1440px;
-  padding: 48px 100px;
+  padding: 160px 100px;
+
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
+  z-index: 5;
+}
+
+.big-ellipse {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  &.ellipse1 {
+    width: clamp(70px, calc(70px + 60 * ((100vw - 320px) / 380)), 130px);
+    height: auto;
+    top: 120px;
+    left: 65%;
+  }
+  &.ellipse2 {
+    width: 204px;
+    height: 204px;
+    top: 670px;
+    left: 32%;
+  }
+  &.ellipse3 {
+    width: 73px;
+    height: 73px;
+    bottom: 30px;
+    left: 90%;
+  }
+  @media (max-width: 1370px) {
+    &.ellipse2 {
+      top: 750px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    &.ellipse2 {
+      display: none;
+    }
+  }
 }
 
 .contact-left {
-  display: grid;
-  align-items: center;
-  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   border-radius: 12px;
   margin: 0 5.55% 0 5.55%;
+  z-index: 5;
 
   h3 {
     font-family: 'Baloo 2';
     color: #5988ff;
     font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
     line-height: 0.9;
-    text-align: left;
+    text-align: flex-start;
     margin: 0;
     margin-bottom: 60px;
   }
@@ -29,14 +70,14 @@
     font-size: clamp(23px, calc(23px + 9 * ((100vw - 320px) / 380)), 32px);
     margin: 0;
     align-self: left;
-    margin-bottom: 30px;
+    margin: 38px 0 30px 0;
   }
 
   p {
     font-family: 'Montserrat';
     color: black;
     font-size: 16px;
-    margin: 35px 0 35px 0;
+    margin: 5px 0 35px 0;
   }
 
   .contact-left-contact-me {
@@ -45,6 +86,7 @@
     align-items: center;
     margin: 0;
     justify-self: start;
+    z-index: 5;
   }
 
   .contact-left-contact-me > span {
@@ -56,12 +98,14 @@
     font-family: 'Montserrat', system-ui, sans-serif;
     font-weight: 100;
     font-size: 16px;
+    z-index: 5;
   }
 
   .contact-left-contact-me > span:last-of-type {
     font-family: 'Baloo 2', system-ui, sans-serif;
     font-weight: 600;
     font-size: 16px;
+    z-index: 5;
   }
 }
 
@@ -71,6 +115,8 @@
   align-items: flex-start;
   gap: 14px;
   padding: 0 0 0 5.55%;
+  z-index: 5;
+  margin-top: 195px;
 }
 
 .contact-right > input,
@@ -95,7 +141,7 @@
 }
 
 .contact-right > textarea {
-  min-height: 120px;
+  min-height: 220px;
   max-height: 60vh;
   resize: vertical;
   overflow: auto;
@@ -145,6 +191,7 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.15s ease, background-color 0.15s ease;
+  z-index: 5;
 
   &:hover {
     transform: scale(1.03);
@@ -161,15 +208,20 @@ button {
   margin: 0 auto;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .contact-section {
     flex-direction: column;
     align-items: stretch;
     gap: 40px;
     padding: 64px 5.55% 64px 0;
+
+    h3 {
+      margin-top: 170px;
+    }
   }
 
   .contact-right {
     gap: 27px;
+    margin: 0px 0 100px 0;
   }
 }

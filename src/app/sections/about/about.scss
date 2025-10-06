@@ -10,8 +10,9 @@
 
   .big-ellipse {
     position: absolute;
+    transform: translate(-50%, -50%);
     z-index: 1;
-    top: -115px;
+    top: 0px;
     width: 208px;
     height: 208px;
 
