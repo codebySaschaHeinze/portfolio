@@ -30,10 +30,10 @@
       width: 60%;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1090px) {
       top: -27%;
       left: -25%;
-      width: 110vw;
+      width: 113vw;
       height: auto;
     }
   }
@@ -49,6 +49,17 @@
       width: 660px;
       height: auto;
       z-index: 2;
+
+      @media (max-width: 1090px) {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: auto;
+        height: clamp(300px, 56vh, 600px);
+        max-width: 90%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -153,7 +164,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1090px) {
   .atf-section {
     display: flex;
     flex-direction: column;
@@ -163,14 +174,6 @@
     .atf-social-buttons,
     .atf-scroll-and-divider {
       display: none;
-    }
-
-    .atf-portrait {
-      left: 50%;
-      bottom: 0;
-      transform: translateX(-50%);
-      width: 200px;
-      height: auto;
     }
   }
 
@@ -191,5 +194,17 @@
     p {
       color: white;
     }
+  }
+}
+
+/* For large screens ensure portrait scales to 50vh while keeping its position */
+@media (min-width: 1090px) {
+  .atf-left .atf-portrait {
+    /* keep absolute positioning as defined above; only adjust size */
+    height: 50vh;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    transition: height 200ms ease;
   }
 }
