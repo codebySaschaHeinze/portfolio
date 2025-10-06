@@ -60,7 +60,7 @@
 
     p {
       font-family: 'Montserrat';
-      color: var(--color-accent);
+      color: #0043f0;
       font-size: 18px;
     }
 
@@ -92,7 +92,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      z-index: 6;
+      z-index: 4;
       margin: 20px;
     }
 
@@ -146,22 +146,24 @@
       line-height: 120%;
     }
 
-    button {
+    /* Button styles copied from works-section for consistent look */
+    .btn {
+      position: relative;
+      overflow: hidden;
       background: transparent;
       border: 2px solid #5988ff;
       border-radius: 10px;
       padding: 15px;
       cursor: pointer;
       transition: transform 0.12s ease;
-      align-self: flex-start;
 
-      p {
-        color: #5988ff;
-        text-align: center;
+      .btn-label {
+        font-size: 21px;
+        color: var(--color-accent);
         position: relative;
         z-index: 3;
         transition: color 0.12s ease;
-        font-size: 21px;
+        text-align: center;
       }
 
       &::before {
@@ -179,12 +181,11 @@
       }
 
       &:hover {
-        transform: scale(1.02);
+        transform: scale(1.04);
 
-        p {
+        .btn-label {
           color: #fff;
         }
-
         &::before {
           width: 250%;
           height: 250%;

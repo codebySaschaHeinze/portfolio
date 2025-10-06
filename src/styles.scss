@@ -3,6 +3,16 @@
   scroll-behavior: smooth;
 }
 
+:root {
+  --color-accent: #5988ff;
+}
+
+/* Ensure button labels default to the project's accent color */
+.btn .btn-label,
+button {
+  color: var(--color-accent);
+}
+
 @font-face {
   font-family: 'Baloo 2';
   src: url('/fonts/baloo-2-v23-latin-regular.woff2') format('woff2');

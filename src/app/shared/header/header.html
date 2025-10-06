@@ -1,4 +1,4 @@
-<header class="header-section">
+<header class="header-section" [class.hidden]="isOverlayOpen">
   <div class="header-inner">
     <div class="header-left">
       <a class="logo" href="/">
@@ -20,8 +20,39 @@
       </div>
 
       <div class="burger-menu">
-        <img src="/icons/burger.png" alt="Bürger-Menü öffnen" />
+        <button class="burger-button" aria-label="Menü öffnen" (click)="toggleOverlay()">
+          <img src="/icons/burger.png" alt="Bürger-Menü öffnen" />
+        </button>
       </div>
     </nav>
   </div>
 </header>
+<div
+  class="header-overlay"
+  *ngIf="isOverlayOpen"
+  (click)="closeOverlay()"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="overlay-inner" (click)="$event.stopPropagation()">
+    <div class="overlay-top">
+      <a class="logo" href="/">
+        <img src="/icons/logo-blue.png" width="80" height="80" alt="Logo" />
+      </a>
+      <button class="overlay-close" aria-label="Menü schließen" (click)="toggleOverlay()">
+        <img src="/icons/burger.png" alt="Schließen" />
+      </button>
+    </div>
+
+    <nav class="overlay-nav" aria-label="Overlay Navigation">
+      <a href="#about" (click)="closeOverlay()">Über mich</a>
+      <a href="#skills" (click)="closeOverlay()">Skills</a>
+      <a href="#works" (click)="closeOverlay()">Portfolio</a>
+      <div class="overlay-lang">
+        <a href="/de" class="active" (click)="closeOverlay()">DE</a>
+        <span class="sep">/</span>
+        <a href="/en" (click)="closeOverlay()">EN</a>
+      </div>
+    </nav>
+  </div>
+</div>

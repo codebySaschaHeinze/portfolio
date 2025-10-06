@@ -8,6 +8,7 @@
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
   z-index: 5;
   overflow-x: clip;
+  overflow-y: clip;
 
   .atf-left,
   .atf-right {
@@ -163,6 +164,14 @@
     .atf-scroll-and-divider {
       display: none;
     }
+
+    .atf-portrait {
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 200px;
+      height: auto;
+    }
   }
 
   .atf-left {
@@ -182,12 +191,5 @@
     p {
       color: white;
     }
-  }
-
-  .atf-portrait {
-    bottom: 0;
-    left: 50%;
-    width: auto;
-    height: 600px;
   }
 }
