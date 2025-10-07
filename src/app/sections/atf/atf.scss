@@ -22,7 +22,8 @@
     left: -10%;
     width: 56.908%;
     height: auto;
-    z-index: 1;
+
+    /* ellipse positioning for different breakpoints */
 
     @media (max-width: 1020px) {
       top: -10%;
@@ -35,6 +36,42 @@
       left: -25%;
       width: 113vw;
       height: auto;
+    }
+
+    @media (max-width: 750px) {
+      top: -10%;
+      left: -50%;
+      width: 144vw;
+      height: auto;
+    }
+    @media (max-width: 580px) {
+      top: -5%;
+    }
+    @media (max-width: 480px) {
+      width: 194vw;
+      height: auto;
+      top: -7%;
+      left: -105%;
+    }
+    @media (max-width: 400px) {
+      width: 217vw;
+      height: auto;
+      top: -10%;
+      left: -130%;
+    }
+
+    @media (max-width: 350px) {
+      width: 239vw;
+      height: auto;
+      top: -2%;
+      left: -155%;
+    }
+
+    @media (max-width: 320px) {
+      width: 248vw;
+      height: auto;
+      top: -4%;
+      left: -165%;
     }
   }
 
@@ -56,8 +93,8 @@
         bottom: 0;
         transform: translateX(-50%);
         width: auto;
-        height: clamp(300px, 56vh, 600px);
-        max-width: 90%;
+        height: clamp(300px, 62vh, 600px);
+        max-width: 100%;
         object-fit: cover;
       }
     }
@@ -76,12 +113,41 @@
     text-align: left;
     width: 100%;
   }
+
+  h1 {
+    font-family: 'Baloo 2';
+    font-weight: 800;
+    line-height: 0.9;
+    font-size: clamp(32px, 9vw, 128px);
+    letter-spacing: -0.02em;
+
+    @media (max-width: 800px) {
+      font-size: clamp(32px, 10vw, 128px);
+      align-self: center;
+    }
+
+    @media (max-width: 600px) {
+      font-size: clamp(32px, 13vw, 128px);
+      align-self: center;
+    }
+  }
+
   .atf-text p {
     font-family: 'Baloo 2';
     font-weight: 100;
     font-size: clamp(24px, 5vw, 58px);
     line-height: 50px;
     margin: 0 0 2% 4px;
+
+    @media (max-width: 950px) {
+      font-size: clamp(30px, 5vw, 58px);
+      line-height: 25px;
+    }
+
+    @media (max-width: 460px) {
+      margin-top: 50px;
+      font-size: clamp(21px, 7vw, 58px);
+    }
   }
 
   .atf-social-buttons {
@@ -197,10 +263,33 @@
   }
 }
 
-/* For large screens ensure portrait scales to 50vh while keeping its position */
+@media (max-width: 600px) {
+  .atf-right {
+    width: 100% !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .atf-text {
+    width: 80vw;
+    max-width: 720px;
+    position: relative;
+    left: 66%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .atf-section .atf-right .atf-text h1,
+  .atf-section .atf-right .atf-text p {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 1090px) {
   .atf-left .atf-portrait {
-    /* keep absolute positioning as defined above; only adjust size */
     height: 50vh;
     width: auto;
     max-width: none;

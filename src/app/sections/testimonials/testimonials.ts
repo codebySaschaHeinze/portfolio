@@ -13,7 +13,7 @@ export class Testimonials {
       idT: 1,
       nameT: 'Daniel Luzius',
       project: 'Kochwelt',
-      text: 'Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen.',
+      text: 'Mit Sascha zu arbeiten macht Spaß, weil er Kreativität mit Struktur verbindet. Er behält auch in stressigen Phasen den Überblick und motiviert das Team, das Beste aus jedem Projekt herauszuholen.',
     },
     {
       idT: 2,
