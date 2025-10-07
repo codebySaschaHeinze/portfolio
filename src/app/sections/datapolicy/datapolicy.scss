@@ -1,0 +1,32 @@
+.privacy-police-section {
+  padding: 100px 5.55%;
+}
+
+h2 {
+  font-family: 'Baloo 2';
+  color: #5988ff;
+  font-size: clamp(23px, 6vw, 90px);
+  line-height: 0.9;
+  margin: 0 0 60px 0;
+}
+
+h4 {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: #5988ff;
+  font-size: 18px;
+}
+
+p {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: black;
+  font-size: 16px;
+  margin: 0 0 35px 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
