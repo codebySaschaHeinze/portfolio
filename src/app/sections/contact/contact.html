@@ -12,21 +12,78 @@
     </div>
   </div>
 
-  <div class="contact-right">
-    <input type="text" placeholder="Dein Name" />
-    <input type="text" placeholder="Deine Email" />
+  <form class="contact-right" [formGroup]="form" (submit)="onSubmit($event)" novalidate>
+    <input
+      #nameInput
+      type="text"
+      placeholder="Dein Name"
+      formControlName="name"
+      (focus)="onFocus('name')"
+      (blur)="onBlur('name')"
+      [attr.aria-invalid]="nameCtrl.invalid"
+      [attr.aria-describedby]="nameCtrl.invalid && nameFocused ? 'name-error' : null"
+    />
+    <p
+      *ngIf="nameCtrl.invalid && nameFocused"
+      id="name-error"
+      class="field-error"
+      aria-live="polite"
+    >
+      Dein vollständiger Name ist erforderlich.
+    </p>
 
-    <textarea id="msg" name="message" placeholder="Deine Nachricht"></textarea>
+    <input
+      #emailInput
+      type="email"
+      placeholder="Deine E-Mail"
+      formControlName="email"
+      (focus)="onFocus('email')"
+      (blur)="onBlur('email')"
+      [attr.aria-invalid]="emailCtrl.invalid"
+      [attr.aria-describedby]="emailCtrl.invalid && emailFocused ? 'email-error' : null"
+    />
+    <p
+      *ngIf="emailCtrl.invalid && emailFocused"
+      id="email-error"
+      class="field-error"
+      aria-live="polite"
+    >
+      Deine vollständige E-Mail-Adresse ist erforderlich.
+    </p>
+
+    <textarea
+      #msgInput
+      id="msg"
+      name="message"
+      placeholder="Deine Nachricht"
+      formControlName="message"
+      (focus)="onFocus('message')"
+      (blur)="onBlur('message')"
+      [attr.aria-invalid]="messageCtrl.invalid"
+      [attr.aria-describedby]="messageCtrl.invalid && messageFocused ? 'msg-error' : null"
+    ></textarea>
+    <p
+      *ngIf="messageCtrl.invalid && messageFocused"
+      id="msg-error"
+      class="field-error"
+      aria-live="polite"
+    >
+      Bitte eine Nachricht eingeben.
+    </p>
+
     <div class="contact-right-check-box">
-      <input type="checkbox" id="contact-check-box" />
+      <input type="checkbox" id="contact-check-box" formControlName="consent" />
       <label for="contact-check-box" class="consent">
         Ich habe die
         <a [routerLink]="['/datenschutz']" routerLinkActive="active">Datenschutzerklärung</a>
         gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.
       </label>
     </div>
-    <button>Sag' Hallo</button>
-  </div>
+
+    <button type="submit" [disabled]="form.invalid" (keydown.enter)="onSubmit($event)">
+      Sag' Hallo
+    </button>
+  </form>
 
   <img class="big-ellipse ellipse1" src="icons/ellipse-blue.png" alt="" />
   <img class="big-ellipse ellipse2" src="icons/ellipse-blue.png" alt="" />

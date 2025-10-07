@@ -196,6 +196,7 @@ button {
   &:hover {
     transform: scale(1.03);
     background: color-mix(in srgb, #5988ff 99%, transparent);
+    color: #ffffff;
   }
   &:focus-visible {
     outline: 3px solid #5988ff;
@@ -230,11 +231,28 @@ button {
     margin: 0px 0 100px 0;
   }
 
-  /* center the contact action button horizontally on small screens */
   .contact-right button,
   .contact-section .contact-right .btn {
     align-self: center;
     margin: 0 auto;
-    display: inline-flex; /* keep intrinsic width */
+    display: inline-flex;
   }
+}
+
+.field-error {
+  font: 16px/1.4 'Montserrat', system-ui, sans-serif;
+  color: #d21b1b;
+  margin: -6px 0 6px 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  background: transparent;
+}
+
+[aria-invalid='true']:focus {
+  outline: 3px solid #d21b1b;
+  outline-offset: 2px;
 }
