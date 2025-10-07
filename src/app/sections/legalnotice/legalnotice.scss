@@ -1,24 +1,33 @@
-.impressum-section {
-  padding: 120px 5.55%;
-  background: linear-gradient(to bottom, #ffffff 0%, #f7f9ff 100%);
+.legal-notice-section {
+  padding: 100px 5.55%;
+}
 
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
+h2 {
+  font-family: 'Baloo 2';
+  color: #5988ff;
+  font-size: clamp(23px, 6vw, 90px);
+  line-height: 0.9;
+  margin: 100px 0 10px 0;
+}
 
-  h2 {
-    font-family: 'Baloo 2';
-    color: #0043f0;
-    margin-bottom: 20px;
-  }
-  p {
-    font-family: 'Montserrat';
-    color: #333;
-    line-height: 1.6;
-  }
-  .small {
-    color: #666;
-    font-size: 14px;
+h4 {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: #5988ff;
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+p {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  color: black;
+  font-size: 16px;
+  margin: 0 0 35px 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
