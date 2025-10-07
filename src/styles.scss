@@ -1,8 +1,17 @@
-* {
-  margin: 0 auto;
+/* Reset: avoid globally centering every element (was causing unexpected centering) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
+/* Project variables */
 :root {
   --color-accent: #5988ff;
 }

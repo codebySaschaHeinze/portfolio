@@ -182,7 +182,7 @@
 }
 
 button {
-  align-self: flex-start;
+  align-self: center;
   padding: 12px 18px;
   border: 1px solid #5988ff;
   border-radius: 10px;
@@ -217,11 +217,24 @@ button {
 
     h3 {
       margin-top: 170px;
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      margin-top: 10px;
     }
   }
 
   .contact-right {
     gap: 27px;
     margin: 0px 0 100px 0;
+  }
+
+  /* center the contact action button horizontally on small screens */
+  .contact-right button,
+  .contact-section .contact-right .btn {
+    align-self: center;
+    margin: 0 auto;
+    display: inline-flex; /* keep intrinsic width */
   }
 }

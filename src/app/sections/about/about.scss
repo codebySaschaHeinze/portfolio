@@ -1,6 +1,6 @@
 .about-section {
   position: relative;
-  max-width: 1440px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,7 +56,6 @@
       line-height: 1;
       margin-bottom: 50px;
     }
-
     h4 {
       font-family: 'Baloo 2';
       color: #5988ff;
@@ -79,6 +78,12 @@
       display: flex;
       flex-direction: row;
 
+      @media (max-width: 1050px) {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+      }
+
       .left-location-box,
       .left-remote-box {
         display: flex;
@@ -87,10 +92,10 @@
         align-items: center;
         margin-top: 0px;
         padding: 30px;
-      }
 
-      @media (max-width: 670px) {
-        flex-direction: column;
+        @media (max-width: 1150px) {
+          padding: 10px;
+        }
       }
     }
 
@@ -99,7 +104,7 @@
       background-position: center;
       background-repeat: no-repeat;
       z-index: 4;
-      margin: 20px;
+      margin: 20px 10px 20px 0;
     }
 
     .img-1 {
@@ -141,7 +146,19 @@
     margin-right: 50px;
     margin-bottom: 60px;
 
+    @media (max-width: 1150px) {
+      margin: 30px 8.55%;
+    }
+
+    .about-right > div:last-child {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
     .about-right button {
+      margin: 0;
       align-self: flex-start;
     }
 
@@ -152,7 +169,6 @@
       line-height: 120%;
     }
 
-    /* Button styles copied from works-section for consistent look */
     .btn {
       position: relative;
       overflow: hidden;
@@ -202,8 +218,15 @@
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
   .about-section {
     flex-direction: column;
+  }
+  /* On smaller screens make the action button centered horizontally */
+  .about-section .about-right > button,
+  .about-section .about-right .btn {
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
