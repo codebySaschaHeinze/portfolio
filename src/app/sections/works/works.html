@@ -17,9 +17,14 @@
         <h4>{{ project.title }}</h4>
         <span>{{ project.set.join(' | ') }}</span>
         <p>{{ project.description }}</p>
-        <button type="button" (click)="openGithub(project.githubLink)" class="btn">
-          <span class="btn-label">{{ project.github || 'GitHub' }}</span>
-        </button>
+        <div class="work-actions">
+          <button type="button" (click)="openGithub(project.githubLink)" class="btn">
+            <span class="btn-label">{{ project.github || 'GitHub' }}</span>
+          </button>
+          <a class="btn alt" href="#" target="_blank" rel="noopener">
+            <span class="btn-label">Live Test</span>
+          </a>
+        </div>
       </div>
     </div>
     }

@@ -17,7 +17,7 @@
   h3 {
     font-family: 'Baloo 2';
     color: #5988ff;
-    font-size: 96px;
+    font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
     line-height: 0.9;
     margin: 0 0 60px 0;
   }
@@ -77,6 +77,10 @@
   height: 51px;
   top: 1350px;
   left: 130px;
+
+  @media (max-width: 1150px) {
+    display: none;
+  }
 }
 .ellipse6 {
   width: 238px;
@@ -105,7 +109,6 @@
   .ellipse4 {
     top: 730px;
     right: -1000px;
-    // z-index: -1;
   }
 
   .ellipse6 {
@@ -145,7 +148,8 @@
     margin: 35px 0;
   }
 
-  button {
+  button,
+  .btn {
     position: relative;
     overflow: hidden;
     background: transparent;
@@ -190,6 +194,31 @@
         background-color: #5988ff;
       }
     }
+  }
+
+  /* inverted button variant (applies to anchors or buttons with .alt) */
+  .btn.alt {
+    background: #5988ff;
+    border-color: #5988ff;
+    color: #ffffff;
+  }
+  .btn.alt .btn-label {
+    color: #ffffff;
+  }
+  .btn.alt::before {
+    /* start transparent */
+    background-color: rgba(255, 255, 255, 0);
+  }
+  .btn.alt:hover {
+    transform: scale(1.04);
+  }
+  .btn.alt:hover .btn-label {
+    color: #5988ff;
+  }
+  .btn.alt:hover::before {
+    width: 250%;
+    height: 250%;
+    background-color: #ffffff;
   }
 
   .works-row {
@@ -241,12 +270,23 @@
     }
   }
 
+  /* actions wrapper: by default show buttons inline and keep alt hidden */
+  .work-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+  .work-actions .btn.alt {
+    display: none; /* hidden on desktop */
+  }
+
   @media (max-width: 1150px) {
     .works-row,
     .works-row.reverse {
       flex-direction: column;
       gap: 40px;
-      align-items: stretch;
+      align-items: center; /* center contents horizontally */
     }
 
     .works-left,
@@ -259,6 +299,45 @@
     .works-right {
       text-align: left;
       width: 80%;
+    }
+    /* disable image hover and clicks on smaller screens */
+    .works-left {
+      cursor: default;
+      pointer-events: none; /* prevent clicks */
+    }
+    .works-left img {
+      transition: none;
+    }
+
+    /* center action buttons and add spacing */
+    .works-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+    /* show the alt button and keep buttons side-by-side on small screens */
+    .work-actions {
+      flex-direction: row;
+      justify-content: center;
+      gap: 12px;
+    }
+    .work-actions .btn.alt {
+      display: inline-flex; /* show alt button at small screens */
+    }
+    /* inverted button style: background filled, label inverted */
+    .works-container .btn.alt {
+      background: #5988ff;
+      border-color: #ffffff00;
+      color: #ffffff;
+    }
+    .works-container .btn.alt .btn-label {
+      color: #ffffff;
+    }
+    /* original button becomes outline on small screens for contrast */
+    .works-container .btn:not(.alt) {
+      background: transparent;
+      border: 2px solid #ffffff; /* assuming dark bg on top of ellipse */
     }
   }
 }
