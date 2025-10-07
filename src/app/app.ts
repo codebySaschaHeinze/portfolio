@@ -1,21 +1,12 @@
-import { Component, signal } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/header/header';
-import { Atf } from './sections/atf/atf';
-import { About } from './sections/about/about';
-import { Skills } from './sections/skills/skills';
-import { Works } from './sections/works/works';
-import { Testimonials } from './sections/testimonials/testimonials';
-import { Contact } from './sections/contact/contact';
 import { Footer } from './shared/footer/footer';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, Atf, About, Skills, Works, Testimonials, Contact, Footer],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('Sascha Heinze');
-}
+export class App {}
