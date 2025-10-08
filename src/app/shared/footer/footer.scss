@@ -1,5 +1,5 @@
 .footer-section {
-  height: 189px;
+  height: 259px;
   background: linear-gradient(to bottom right, #0043f0 0%, #5988ff 50%, #0043f0 100%);
   width: 100%;
   margin: 0 auto;
@@ -30,6 +30,11 @@
   img {
     width: 69px;
     height: 69px;
+
+    &:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.4));
+    }
   }
 }
 
