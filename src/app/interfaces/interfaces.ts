@@ -11,6 +11,7 @@ export interface Project {
   description: string;
   github: string;
   githubLink: string;
+  liveLink: string;
 }
 
 export interface Testimonial {

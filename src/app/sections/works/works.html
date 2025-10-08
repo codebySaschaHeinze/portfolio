@@ -18,12 +18,13 @@
         <span>{{ project.set.join(' | ') }}</span>
         <p>{{ project.description }}</p>
         <div class="work-actions">
-          <button type="button" (click)="openGithub(project.githubLink)" class="btn">
+          <button type="button" (click)="openExternal(project.githubLink)" class="btn">
             <span class="btn-label">{{ project.github || 'GitHub' }}</span>
           </button>
-          <a class="btn alt" href="#" target="_blank" rel="noopener">
+
+          <button type="button" (click)="openExternal(project.liveLink)" class="btn alt">
             <span class="btn-label">Live Test</span>
-          </a>
+          </button>
         </div>
       </div>
     </div>
