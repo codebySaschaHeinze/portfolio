@@ -1,6 +1,11 @@
 .privacy-police-section {
+  position: relative;
   max-width: 1440px;
-  padding: 100px 5.55%;
+  padding: 100px clamp(5.55%, 10vw, 11%);
+  overflow: clip;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h2 {
@@ -9,25 +14,67 @@ h2 {
   font-size: clamp(23px, 6vw, 90px);
   line-height: 0.9;
   margin: 100px 0 100px 0;
+  z-index: 2;
 }
 
 h4 {
   font-family: 'Montserrat', system-ui, sans-serif;
   color: #5988ff;
-  font-size: 18px;
+  font-size: 19px;
+  z-index: 2;
 }
 
 p {
   font-family: 'Montserrat', system-ui, sans-serif;
   color: black;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 35px 0;
+  z-index: 2;
 }
 
 a {
   text-decoration: none;
+  z-index: 2;
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+.big-ellipse {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  &.ellipse1 {
+    width: 320px;
+    height: auto;
+    top: 0%;
+    left: 8%;
+  }
+  &.ellipse2 {
+    width: 169px;
+    height: auto;
+    top: 16%;
+    left: 90%;
+  }
+  &.ellipse3 {
+    width: 92px;
+    height: auto;
+    top: 36%;
+    left: 98%;
+  }
+  &.ellipse4 {
+    width: 119px;
+    height: auto;
+    top: 74%;
+    left: 0%;
+  }
+}
+@media (max-width: 850px) {
+  .ellipse2,
+  .ellipse3,
+  .ellipse4 {
+    display: none;
   }
 }
