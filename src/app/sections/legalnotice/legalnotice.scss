@@ -1,7 +1,7 @@
 .legal-notice-section {
   position: relative;
   max-width: 1440px;
-  padding: 100px clamp(5.55%, 10vw, 11%);
+  padding: 150px clamp(5.55%, 10vw, 11%) 50px;
   overflow: clip;
 }
 
@@ -10,7 +10,7 @@ h2 {
   color: #5988ff;
   font-size: clamp(23px, 6vw, 90px);
   line-height: 0.9;
-  margin: 100px 0 100px 0;
+  margin: 100px 0 50px 0;
   z-index: 2;
 }
 
@@ -28,12 +28,14 @@ p {
   font-size: 18px;
   margin: 0 0 35px 0;
   z-index: 2;
+  white-space: normal;
 }
 
 a {
   text-decoration: none;
   z-index: 2;
-
+  white-space: normal;
+  overflow-wrap: anywhere;
   &:hover {
     text-decoration: underline;
   }
@@ -74,5 +76,17 @@ a {
   .ellipse3,
   .ellipse4 {
     display: none;
+  }
+
+  h2 {
+    margin: 50px 0 30px 0;
+  }
+
+  h4 {
+    margin-top: 20px;
+  }
+
+  p {
+    margin: 0 0 13px 0;
   }
 }
