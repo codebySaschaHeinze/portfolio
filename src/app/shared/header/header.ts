@@ -11,17 +11,26 @@ import { LangService } from '../../services/lang-service';
   styleUrl: './header.scss',
 })
 export class Header {
+  isOverlayOpen = false;
+
   constructor(private lang: LangService) {}
 
   is(l: 'de' | 'en') {
     return this.lang.get() === l;
   }
 
-  set(e: Event, l: 'de' | 'en') {
+  // Desktop: Sprache setzen
+  setLang(e: Event, l: 'de' | 'en') {
     e.preventDefault();
     this.lang.set(l);
   }
-  isOverlayOpen = false;
+
+  // Overlay: Sprache setzen und schließen
+  setLangAndClose(e: Event, l: 'de' | 'en') {
+    e.preventDefault();
+    this.lang.set(l);
+    this.closeOverlay();
+  }
 
   toggleOverlay() {
     this.isOverlayOpen = !this.isOverlayOpen;

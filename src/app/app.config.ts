@@ -7,6 +7,7 @@ import { withFetch } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { LangService } from './services/lang-service';
+import { withInMemoryScrolling } from '@angular/router';
 
 @Injectable()
 class JsonTranslateLoader implements TranslateLoader {
@@ -22,7 +23,13 @@ function initLangFactory(lang: LangService) {
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideRouter(routes),
+    provideRouter(
+      routes,
+      withInMemoryScrolling({
+        scrollPositionRestoration: 'top',
+        anchorScrolling: 'enabled',
+      })
+    ),
     provideHttpClient(),
     provideAnimations(),
     provideHttpClient(withFetch()),

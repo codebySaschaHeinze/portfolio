@@ -1,5 +1,6 @@
 <header class="header-section" [class.hidden]="isOverlayOpen">
   <div class="header-inner">
+    <!-- Left: Logo -->
     <div class="header-left">
       <a class="logo" href="/">
         <img src="/icons/logo.png" width="110" height="110" alt="Logo" />
@@ -7,7 +8,7 @@
     </div>
 
     <nav class="header-right" aria-label="Hauptnavigation">
-      <div class="nav-list">
+      <ul class="nav-list">
         <li>
           <a href="#about">{{ 'HEADER.LINKS.ABOUT' | translate }}</a>
         </li>
@@ -17,24 +18,12 @@
         <li>
           <a href="#works">{{ 'HEADER.LINKS.WORKS' | translate }}</a>
         </li>
-      </div>
+      </ul>
 
       <div class="lang-switch" aria-label="Sprachauswahl">
-        <a
-          href="#"
-          [attr.aria-pressed]="is('de')"
-          [class.active]="is('de')"
-          (click)="set($event, 'de')"
-          >DE</a
-        >
+        <a href="#" [class.active]="is('de')" (click)="setLang($event, 'de')">DE</a>
         <span class="sep">/</span>
-        <a
-          href="#"
-          [attr.aria-pressed]="is('en')"
-          [class.active]="is('en')"
-          (click)="set($event, 'en')"
-          >EN</a
-        >
+        <a href="#" [class.active]="is('en')" (click)="setLang($event, 'en')">EN</a>
       </div>
 
       <div class="burger-menu">
@@ -50,6 +39,7 @@
   </div>
 </header>
 
+<!-- Overlay -->
 <div
   class="header-overlay"
   *ngIf="isOverlayOpen"
@@ -64,7 +54,7 @@
       </a>
       <button
         class="overlay-close"
-        aria-label="{{ 'HEADER.BURGER.CLOSE' | translate }}"
+        [attr.aria-label]="'HEADER.BURGER.CLOSE' | translate"
         (click)="toggleOverlay()"
       >
         <img src="/icons/burger.png" [alt]="'HEADER.BURGER.CLOSE' | translate" />
@@ -76,10 +66,10 @@
       <a href="#skills" (click)="closeOverlay()">{{ 'HEADER.LINKS.SKILLS' | translate }}</a>
       <a href="#works" (click)="closeOverlay()">{{ 'HEADER.LINKS.WORKS' | translate }}</a>
 
-      <div class="overlay-lang">
-        <a href="/de" class="active" (click)="closeOverlay()">DE</a>
+      <div class="overlay-lang" aria-label="Sprachauswahl">
+        <a href="#" [class.active]="is('de')" (click)="setLangAndClose($event, 'de')">DE</a>
         <span class="sep">/</span>
-        <a href="/en" (click)="closeOverlay()">EN</a>
+        <a href="#" [class.active]="is('en')" (click)="setLangAndClose($event, 'en')">EN</a>
       </div>
     </nav>
   </div>

@@ -16,7 +16,6 @@
     action="https://formspree.io/f/xnngbelj"
     method="POST"
   >
-    <!-- Name -->
     <div class="field">
       <input
         name="name"
@@ -57,7 +56,6 @@
       {{ 'CONTACT.ERROR_NAME' | translate }}
     </p>
 
-    <!-- Email -->
     <div class="field">
       <input
         name="email"
@@ -98,7 +96,6 @@
       {{ 'CONTACT.ERROR_EMAIL' | translate }}
     </p>
 
-    <!-- Message -->
     <div class="field">
       <textarea
         #msgInput
@@ -138,8 +135,6 @@
     >
       {{ 'CONTACT.ERROR_MSG' | translate }}
     </p>
-
-    <!-- Consent with inline link -->
     <div class="contact-right-check-box">
       <input type="checkbox" id="contact-check-box" formControlName="consent" />
       <label for="contact-check-box" class="consent">
@@ -150,13 +145,9 @@
         {{ 'CONTACT.CONSENT_SUFFIX' | translate }}
       </label>
     </div>
-
-    <!-- Submit -->
     <button type="submit" [disabled]="form.invalid">
       {{ 'CONTACT.BUTTON' | translate }}
     </button>
-
-    <!-- Overlays -->
     <div class="overlay success" *ngIf="success" (click)="success = false">
       <p>{{ 'CONTACT.SUCCESS' | translate }}</p>
     </div>
