@@ -59,5 +59,65 @@
       "TITLE": "PokeDex",
       "DESC": "Der Pokedex ist eine Web-App, in der man Pokémon mit Bild, Namen und Details wie Typ oder Fähigkeiten anzeigen kann. Über eine Schnittstelle zur PokéAPI werden die Daten geladen und übersichtlich in Kartenform dargestellt."
     }
+  },
+
+  "CONTACT": {
+    "TITLE": "Kontakt",
+    "SUBTITLE": "Etwas, das gelöst werden will?",
+    "TEXT": "Du hast ein Anliegen oder ein Vorhaben? Kontaktiere mich und wir schauen, ob wir das hinbekommen.",
+    "PROMO1": "Full-Stack Developer gesucht?",
+    "PROMO2": "Kontaktiere mich!",
+    "PLACEHOLDER_NAME": "Dein Name",
+    "PLACEHOLDER_EMAIL": "Deine E-Mail",
+    "PLACEHOLDER_MSG": "Deine Nachricht",
+    "ERROR_NAME": "Dein vollständiger Name ist erforderlich.",
+    "ERROR_EMAIL": "Deine vollständige E-Mail-Adresse ist erforderlich.",
+    "ERROR_MSG": "Bitte eine Nachricht eingeben.",
+    "CONSENT": "Ich habe die Datenschutzerklärung gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
+    "BUTTON": "Sag' Hallo",
+    "SUCCESS": "Danke, deine Nachricht wurde gesendet.",
+    "ERROR": "Fehler beim Senden. Bitte später erneut versuchen."
+  },
+
+  "TESTIMONIALS": {
+    "TITLE": "Teamplayer gesucht?",
+    "SUBTITLE": "Das sagen meine Kollegen über mich",
+    "ARIA": "Testimonials",
+    "PROJECT_PREFIX": "Projekt"
+  },
+
+  "FOOTER": {
+    "ALT_LOGO": "Logo",
+    "COPY": "© Sascha Heinze {{year}}",
+    "SOCIAL_ARIA": "Soziale Links",
+    "SOCIAL": { "GITHUB": "GitHub", "CONTACT": "Kontakt", "LINKEDIN": "LinkedIn" },
+    "LINKS": { "IMPRINT": "Impressum", "PRIVACY": "Datenschutz" }
+  },
+  "LEGALNOTICE": {
+    "TITLE": "Impressum",
+    "SUBTITLE": "Angaben gemäß § 5 TMG",
+    "ADDRESS": "Sascha Heinze\nEckhoffplatz 34\n22547 Hamburg",
+    "CONTACT": {
+      "PHONE": "Telefon: +49 15141657089",
+      "EMAIL": "E-Mail: sascha.heinze.dev@gmail.com",
+      "WEBSITE": "Website: https://github.com/codebysaschaheinze"
+    },
+    "DISCLAIMER": {
+      "TITLE": "Haftungsausschluss",
+      "CONTENT": {
+        "LIABILITY_CONTENT": {
+          "TITLE": "Haftung für die Inhalte",
+          "TEXT": "Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden."
+        },
+        "LIABILITY_LINKS": {
+          "TITLE": "Haftung für die Links",
+          "TEXT": "Diese Website enthält ggf. Links zu externen Websites Dritter. Auf deren Inhalte habe ich keinen Einfluss. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich."
+        }
+      }
+    },
+    "COPYRIGHT": {
+      "TITLE": "Urheberrecht",
+      "TEXT": "Die Inhalte dieser Website wurden teilweise selbst erstellt und teilweise aus freien, rechtlich zulässigen Quellen übernommen (z.B. lizenzfreie Bilder oder Textelemente). Alle Inhalte unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind entsprechend gekennzeichnet oder stammen aus Quellen, die keine gesonderte Kennzeichnung erfordern. Eine Vervielfältigung, Bearbeitung oder Verbreitung außerhalb der gesetzlichen Grenzen ist nur mit Zustimmung der jeweiligen Rechteinhaber erlaubt."
+    }
   }
 }
