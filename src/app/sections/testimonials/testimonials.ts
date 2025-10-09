@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Project, Testimonial } from './../../interfaces/interfaces';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimonials',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './testimonials.html',
   styleUrl: './testimonials.scss',
 })

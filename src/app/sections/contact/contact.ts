@@ -10,11 +10,12 @@ import {
   ValidatorFn,
 } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink, RouterLinkActive],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, RouterLinkActive, TranslateModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
