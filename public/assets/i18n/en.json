@@ -26,6 +26,7 @@
     },
     "SCROLL": "SCROLL"
   },
+
   "ABOUT": {
     "TITLE": "Let's work <br /> together",
     "IAM": "I am",
@@ -71,7 +72,9 @@
     "ERROR_NAME": "Your full name is required.",
     "ERROR_EMAIL": "A valid email address is required.",
     "ERROR_MSG": "Please enter a message.",
-    "CONSENT": "I have read the privacy policy and agree to the processing of my data as described.",
+    "CONSENT_PREFIX": "I have read the",
+    "PRIVACY_LINK": "privacy policy",
+    "CONSENT_SUFFIX": "and agree to the processing of my data as described.",
     "BUTTON": "Say Hello",
     "SUCCESS": "Thank you, your message has been sent.",
     "ERROR": "Error while sending. Please try again later."
@@ -79,9 +82,14 @@
 
   "TESTIMONIALS": {
     "TITLE": "Looking for a team player?",
-    "SUBTITLE": "What my colleagues say about me",
+    "SUBTITLE": "This is what my colleagues say about me",
     "ARIA": "Testimonials",
-    "PROJECT_PREFIX": "Project"
+    "PROJECT_PREFIX": "Project",
+    "KOCHWELT": "Kochwelt",
+    "BEACHAPP": "BeachApp",
+    "DANIEL": "Working with Sascha is fun because he combines creativity with structure. Even in stressful phases he keeps an overview and motivates the team to get the best out of every project.",
+    "PATRICK": "In teamwork, Sascha contributed great added value through his creative ideas, strong focus, and broad knowledge.",
+    "DAVID": "This is a placeholder! The collaboration was pleasant and professional. Tasks were completed reliably and the final result was impressive."
   },
 
   "FOOTER": {

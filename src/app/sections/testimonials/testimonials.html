@@ -1,15 +1,27 @@
 <section class="testimonial-section">
   <div class="h3-and-span">
-    <h3>Teamplayer gesucht?</h3>
-    <span>Das sagen meine Kollegen über mich</span>
+    <h3>{{ 'TESTIMONIALS.TITLE' | translate }}</h3>
+    <span>{{ 'TESTIMONIALS.SUBTITLE' | translate }}</span>
   </div>
 
-  <div class="testimonials-container" aria-label="Testimonials" role="region" tabindex="0">
-    @for (testimonial of testimonials; track testimonial.idT) {
+  <div
+    class="testimonials-container"
+    [attr.aria-label]="'TESTIMONIALS.ARIA' | translate"
+    role="region"
+    tabindex="0"
+  >
+    @for (t of testimonials; track t.idT) {
     <div class="testimonial-single">
-      <h4>{{ testimonial.nameT }}</h4>
-      <span class="project-span">Projekt {{ testimonial.project }}</span>
-      <p>"{{ testimonial.text }}"</p>
+      <h4>{{ t.nameT }}</h4>
+      <span class="project-span">
+        {{ 'TESTIMONIALS.PROJECT_PREFIX' | translate }}
+        <span>{{ t.projectKey | translate }}</span>
+      </span>
+      <p>{{ t.textKey | translate }}</p>
+    </div>
+    } @empty {
+    <div class="testimonial-single">
+      <p>{{ 'TESTIMONIALS.ARIA' | translate }}</p>
     </div>
     }
   </div>
