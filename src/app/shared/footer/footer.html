@@ -2,28 +2,49 @@
   <div class="footer-top">
     <div class="footer-left">
       <a class="logo" href="/">
-        <img src="/icons/logo.png" width="110" height="110" alt="Logo" />
+        <img src="/icons/logo.png" width="110" height="110" [alt]="'FOOTER.ALT_LOGO' | translate" />
       </a>
     </div>
+
     <div class="footer-name">
-      <span>&copy; Sascha Heinze 2025</span>
+      <span>
+        {{ 'FOOTER.COPY' | translate : { year: currentYear } }}
+      </span>
     </div>
-    <div class="footer-social-buttons">
+
+    <div class="footer-social-buttons" [attr.aria-label]="'FOOTER.SOCIAL_ARIA' | translate">
       <a href="https://github.com/codebySaschaHeinze" target="_blank" rel="noopener">
-        <div class="image-item img-1" role="img" aria-label="GitHub"></div>
+        <div
+          class="image-item img-1"
+          role="img"
+          [attr.aria-label]="'FOOTER.SOCIAL.GITHUB' | translate"
+        ></div>
       </a>
 
       <a href="#contact">
-        <div class="image-item img-2" role="img" aria-label="Kontakt"></div>
+        <div
+          class="image-item img-2"
+          role="img"
+          [attr.aria-label]="'FOOTER.SOCIAL.CONTACT' | translate"
+        ></div>
       </a>
 
       <a href="https://www.linkedin.com/in/sascha-heinze-509a95387/" target="_blank" rel="noopener">
-        <div class="image-item img-3" role="img" aria-label="LinkedIn"></div>
+        <div
+          class="image-item img-3"
+          role="img"
+          [attr.aria-label]="'FOOTER.SOCIAL.LINKEDIN' | translate"
+        ></div>
       </a>
     </div>
   </div>
+
   <div class="footer-bottom">
-    <a [routerLink]="['/impressum']" routerLinkActive="active" fragment="top">Impressum</a>
-    <a [routerLink]="['/datenschutz']" routerLinkActive="active" fragment="top">Datenschutz</a>
+    <a [routerLink]="['/impressum']" routerLinkActive="active" fragment="top">
+      {{ 'FOOTER.LINKS.IMPRINT' | translate }}
+    </a>
+    <a [routerLink]="['/datenschutz']" routerLinkActive="active" fragment="top">
+      {{ 'FOOTER.LINKS.PRIVACY' | translate }}
+    </a>
   </div>
 </section>

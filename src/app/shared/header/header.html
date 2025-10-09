@@ -19,16 +19,28 @@
         </li>
       </div>
 
-      <div class="lang-switch">
-        <a href="/de" class="active" aria-current="page">DE</a>
+      <div class="lang-switch" aria-label="Sprachauswahl">
+        <a
+          href="#"
+          [attr.aria-pressed]="is('de')"
+          [class.active]="is('de')"
+          (click)="set($event, 'de')"
+          >DE</a
+        >
         <span class="sep">/</span>
-        <a href="/en">EN</a>
+        <a
+          href="#"
+          [attr.aria-pressed]="is('en')"
+          [class.active]="is('en')"
+          (click)="set($event, 'en')"
+          >EN</a
+        >
       </div>
 
       <div class="burger-menu">
         <button
           class="burger-button"
-          aria-label="{{ 'HEADER.CLOSE_MENU' | translate }}"
+          [attr.aria-label]="'HEADER.CLOSE_MENU' | translate"
           (click)="toggleOverlay()"
         >
           <img src="/icons/burger.png" [alt]="'HEADER.BURGER_ALT_CLOSE' | translate" />

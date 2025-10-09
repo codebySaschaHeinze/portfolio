@@ -1,12 +1,12 @@
-import { ApplicationConfig, importProvidersFrom, Injectable } from '@angular/core';
-import { provideHttpClient } from '@angular/common/http';
+import { ApplicationConfig, importProvidersFrom, APP_INITIALIZER, Injectable } from '@angular/core';
+import { provideHttpClient, HttpClient } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
-import { HttpClient } from '@angular/common/http';
+import { withFetch } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
+import { LangService } from './services/lang-service';
 
 @Injectable()
 class JsonTranslateLoader implements TranslateLoader {
@@ -16,16 +16,21 @@ class JsonTranslateLoader implements TranslateLoader {
   }
 }
 
+function initLangFactory(lang: LangService) {
+  return () => lang.init(); // liest localStorage.lang, sonst 'de'
+}
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(),
     provideAnimations(),
+    provideHttpClient(withFetch()),
     importProvidersFrom(
       TranslateModule.forRoot({
-        fallbackLang: 'de',
         loader: { provide: TranslateLoader, useClass: JsonTranslateLoader },
       })
     ),
+    { provide: APP_INITIALIZER, useFactory: initLangFactory, deps: [LangService], multi: true },
   ],
 };
