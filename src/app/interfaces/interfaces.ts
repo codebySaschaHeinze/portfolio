@@ -7,8 +7,8 @@ export interface Project {
   idP: number;
   projectImg: string;
   title: string;
-  set: string[];
   description: string;
+  set: string[];
   github: string;
   githubLink: string;
   liveLink: string;

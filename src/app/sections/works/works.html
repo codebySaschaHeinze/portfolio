@@ -14,9 +14,9 @@
         <a><img [src]="project.projectImg" [alt]="project.title" /></a>
       </div>
       <div class="works-right">
-        <h4>{{ project.title }}</h4>
+        <h4>{{ project.title | translate }}</h4>
         <span>{{ project.set.join(' | ') }}</span>
-        <p>{{ project.description }}</p>
+        <p>{{ project.description | translate }}</p>
         <div class="work-actions">
           <button type="button" (click)="openExternal(project.githubLink)" class="btn">
             <span class="btn-label">{{ project.github || 'GitHub' }}</span>

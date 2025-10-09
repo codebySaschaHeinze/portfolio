@@ -12,10 +12,17 @@
     </div>
   </div>
 
-  <form class="contact-right" [formGroup]="form" (submit)="onSubmit($event)" novalidate>
+  <form
+    class="contact-right"
+    [formGroup]="form"
+    (submit)="onSubmit($event)"
+    action="https://formspree.io/f/xnngbelj"
+    method="POST"
+  >
     <!-- Name -->
     <div class="field">
       <input
+        name="name"
         #nameInput
         type="text"
         placeholder="Dein Name"
@@ -56,6 +63,7 @@
     <!-- E-Mail -->
     <div class="field">
       <input
+        name="email"
         #emailInput
         type="email"
         placeholder="Deine E-Mail"
@@ -143,9 +151,14 @@
       </label>
     </div>
 
-    <button type="submit" [disabled]="form.invalid" (keydown.enter)="onSubmit($event)">
-      Sag' Hallo
-    </button>
+    <button type="submit" [disabled]="form.invalid">Sag' Hallo</button>
+
+    <div class="overlay success" *ngIf="success" (click)="success = false">
+      <p>Danke, deine Nachricht wurde gesendet.</p>
+    </div>
+    <div class="overlay error" *ngIf="error" (click)="error = false">
+      <p>Fehler beim Senden. Bitte später erneut versuchen.</p>
+    </div>
   </form>
 
   <img class="big-ellipse ellipse1" src="icons/ellipse-blue-small.png" alt="" />

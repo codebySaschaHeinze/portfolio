@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-atf',
   standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './atf.html',
   styleUrl: './atf.scss',
 })

@@ -119,7 +119,6 @@
   margin-top: 195px;
 }
 
-/* Inputs und Textarea (dein Original) */
 .contact-right input,
 .contact-right textarea {
   width: 100%;
@@ -279,10 +278,31 @@ button:disabled {
 .field-error {
   font: 16px/1.4 'Montserrat', system-ui, sans-serif;
   color: #d21b1b;
-  margin: -25px 0 6px 2px;
+  margin: -5px 0 6px 2px;
 }
 
 [aria-invalid='true']:focus {
   outline: 3px solid #d21b1b;
   outline-offset: 2px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.overlay.success {
+  background: rgba(0, 128, 0, 0.8);
+}
+.overlay.error {
+  background: rgba(128, 0, 0, 0.8);
 }

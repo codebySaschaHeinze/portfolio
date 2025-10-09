@@ -1,0 +1,63 @@
+{
+  "HEADER": {
+    "ALT": { "LOGO": "Logo", "LOGO_BLUE": "Logo" },
+    "NAV_ARIA": "Hauptnavigation",
+    "OVERLAY_ARIA": "Overlay Navigation",
+    "OPEN_MENU": "Menü öffnen",
+    "CLOSE_MENU": "Menü schließen",
+    "BURGER_ALT_OPEN": "Menü öffnen",
+    "BURGER_ALT_CLOSE": "Schließen",
+    "LINKS": {
+      "ABOUT": "Über mich",
+      "SKILLS": "Skills",
+      "WORKS": "Portfolio"
+    },
+    "LANG": { "DE": "DE", "EN": "EN", "SEP": "/" }
+  },
+
+  "ATF": {
+    "PORTRAIT_ALT": "Porträt von Sascha",
+    "HELLO": "Hallo! Ich bin Sascha",
+    "TITLE": "FULLSTACK<br />DEVELOPER",
+    "SOCIAL_ARIA": "Galerie",
+    "SOCIAL": {
+      "GITHUB": "GitHub",
+      "CONTACT": "Kontakt",
+      "LINKEDIN": "LinkedIn"
+    },
+    "SCROLL": "SCROLL"
+  },
+
+  "ABOUT": {
+    "TITLE": "Arbeiten wir <br /> zusammen",
+    "IAM": "Ich bin",
+    "LOCATION": "ansässig in Hamburg",
+    "REMOTE": "Offen für Remote-Arbeit",
+    "TEXT1": "Was mich antreibt, ist die Mischung aus Kreativität, Logik und Teamarbeit. Ich habe Freude daran, mit Code Dinge zum Leben zu erwecken.",
+    "TEXT2": "Ich lege Wert darauf, dass Projekte nicht nur kurzfristig funktionieren, sondern auch auf Dauer bestehen können.",
+    "BUTTON": "Schick mir eine Nachricht"
+  },
+
+  "SKILLS": {
+    "ARIA": "Fähigkeiten",
+    "TITLE": "Skills"
+  },
+
+  "WORKS": {
+    "TITLE": "Portfolio",
+    "INTRO": "Hier präsentiere ich eine Auswahl meiner Werke – interaktive Projekte zeigen dir meine Skills in Aktion.",
+    "BUTTON_GITHUB": "GitHub",
+    "BUTTON_LIVE": "App Test"
+  },
+
+  "PROJECTS": {
+    "ELPOLLO": {
+      "TITLE": "El Pollo Loco",
+      "DESC": "El Pollo Loco ist ein Jump-and-Run-Spiel im Browser, bei dem man eine Figur steuert, Münzen und Flaschen sammelt und Hühner als Gegner hat. Am Ende wartet ein großer Endboss, den man mit den gesammelten Flaschen besiegen muss."
+    },
+    "POKEDEX": {
+      "TITLE": "PokeDex",
+      "DESC": "Der Pokedex ist eine Web-App, in der man Pokémon mit Bild, Namen und Details wie Typ oder Fähigkeiten anzeigen kann. Über eine Schnittstelle zur PokéAPI werden die Daten geladen und übersichtlich in Kartenform dargestellt."
+    }
+  }
+}

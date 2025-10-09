@@ -317,6 +317,11 @@
       flex-direction: column;
       gap: 40px;
       align-items: center;
+      text-align: center;
+    }
+
+    .works-row.reverse .works-right {
+      text-align: center;
     }
 
     .works-left,
@@ -327,7 +332,7 @@
     }
 
     .works-right {
-      text-align: left;
+      text-align: center;
       width: 80%;
     }
 

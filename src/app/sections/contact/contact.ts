@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   ReactiveFormsModule,
+  FormGroup,
   FormBuilder,
   Validators,
   AbstractControl,
@@ -55,25 +56,6 @@ export class Contact {
     this[`${field}Focused`] = false;
   }
 
-  onSubmit(ev: Event) {
-    ev.preventDefault();
-    if (this.form.valid) {
-      return;
-    }
-    const order: Array<[AbstractControl, ElementRef | undefined]> = [
-      [this.nameCtrl, this.nameEl],
-      [this.emailCtrl, this.emailEl],
-      [this.messageCtrl, this.msgEl],
-      [this.consentCtrl, undefined],
-    ];
-    for (const [ctrl, el] of order) {
-      if (ctrl.invalid) {
-        if (el?.nativeElement) el.nativeElement.focus();
-        break;
-      }
-    }
-  }
-
   private nameValidator(): ValidatorFn {
     return (c: AbstractControl): ValidationErrors | null => {
       const v = String(c.value || '')
@@ -95,5 +77,44 @@ export class Contact {
       const v = String(c.value || '').trim();
       return /[A-Za-zÄÖÜäöüß]/.test(v) ? null : { msg: true };
     };
+  }
+
+  sending = false;
+  success = false;
+  error = false;
+
+  async onSubmit(ev: Event) {
+    if (!this.form.valid) {
+      ev.preventDefault();
+      return;
+    }
+
+    ev.preventDefault();
+    this.sending = true;
+    this.success = false;
+    this.error = false;
+
+    try {
+      const formEl = ev.target as HTMLFormElement;
+      const data = new FormData(formEl);
+
+      const res = await fetch(formEl.action, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        this.success = true;
+        this.form.reset();
+        formEl.reset();
+      } else {
+        this.error = true;
+      }
+    } catch {
+      this.error = true;
+    } finally {
+      this.sending = false;
+    }
   }
 }

@@ -1,0 +1,61 @@
+{
+  "HEADER": {
+    "ALT": { "LOGO": "Logo", "LOGO_BLUE": "Logo" },
+    "NAV_ARIA": "Main navigation",
+    "OVERLAY_ARIA": "Overlay navigation",
+    "OPEN_MENU": "Open menu",
+    "CLOSE_MENU": "Close menu",
+    "BURGER_ALT_OPEN": "Open menu",
+    "BURGER_ALT_CLOSE": "Close",
+    "LINKS": {
+      "ABOUT": "About",
+      "SKILLS": "Skills",
+      "WORKS": "Portfolio"
+    },
+    "LANG": { "DE": "DE", "EN": "EN", "SEP": "/" }
+  },
+  "ATF": {
+    "PORTRAIT_ALT": "Portrait of Sascha",
+    "HELLO": "Hello! I am Sascha",
+    "TITLE": "FULLSTACK<br />DEVELOPER",
+    "SOCIAL_ARIA": "Gallery",
+    "SOCIAL": {
+      "GITHUB": "GitHub",
+      "CONTACT": "Contact",
+      "LINKEDIN": "LinkedIn"
+    },
+    "SCROLL": "SCROLL"
+  },
+  "ABOUT": {
+    "TITLE": "Let's work <br /> together",
+    "IAM": "I am",
+    "LOCATION": "based in Hamburg",
+    "REMOTE": "Open to remote work",
+    "TEXT1": "What drives me is the blend of creativity, logic, and teamwork. I enjoy bringing things to life with code.",
+    "TEXT2": "I value building projects that not only work in the short term, but also last over time.",
+    "BUTTON": "Send me a message"
+  },
+
+  "SKILLS": {
+    "ARIA": "Skills",
+    "TITLE": "Skills"
+  },
+
+  "WORKS": {
+    "TITLE": "Portfolio",
+    "INTRO": "Here I present a selection of my work – interactive projects show you my skills in action.",
+    "BUTTON_GITHUB": "GitHub",
+    "BUTTON_LIVE": "App Test"
+  },
+
+  "PROJECTS": {
+    "ELPOLLO": {
+      "TITLE": "El Pollo Loco",
+      "DESC": "El Pollo Loco is a browser jump-and-run game where you control a character, collect coins and bottles, and face chickens as enemies. At the end, a big boss awaits, who must be defeated with the collected bottles."
+    },
+    "POKEDEX": {
+      "TITLE": "PokeDex",
+      "DESC": "The Pokedex is a web app that displays Pokémon with images, names, and details such as type or abilities. Data is loaded via the PokéAPI and clearly presented in card form."
+    }
+  }
+}
