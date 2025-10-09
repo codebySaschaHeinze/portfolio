@@ -4,43 +4,37 @@
 
   <div class="about-left">
     <div class="left-together">
-      <h3>
-        Arbeiten wir <br />
-        zusammen
-      </h3>
+      <h3 id="about-me" [innerHTML]="'ABOUT.TITLE' | translate"></h3>
     </div>
 
     <div class="left-iam">
-      <div class="left-iam-iam"><h4>Ich bin</h4></div>
+      <div class="left-iam-iam">
+        <h4>{{ 'ABOUT.IAM' | translate }}</h4>
+      </div>
       <div class="left-iam-how">
         <div class="left-location-box">
           <div class="image-item img-1" role="img" aria-label=""></div>
-          <p>ansässig in Hamburg</p>
+          <p>{{ 'ABOUT.LOCATION' | translate }}</p>
         </div>
         <div class="left-remote-box">
           <div class="image-item img-2" role="img" aria-label=""></div>
-          <p>Offen für Remote-Arbeit</p>
+          <p>{{ 'ABOUT.REMOTE' | translate }}</p>
         </div>
       </div>
     </div>
   </div>
 
+  <p>{{ 'CONTACT.CONSENT_PREFIX' | translate }}</p>
+
   <div class="about-right">
     <div class="right-about-me">
-      <p>
-        Was mich antreibt, ist die Mischung aus Kreativität, Logik und Teamarbeit. Ich habe Freude
-        daran, mit Code Dinge zum Leben zu erwecken.
-      </p>
+      <p>{{ 'ABOUT.TEXT1' | translate }}</p>
       <br />
-
-      <p>
-        Ich lege Wert darauf, dass Projekte nicht nur kurzfristig funktionieren, sondern auch auf
-        Dauer bestehen können.
-      </p>
+      <p>{{ 'ABOUT.TEXT2' | translate }}</p>
     </div>
 
     <button type="button" class="btn">
-      <span class="btn-label">Schick mir eine Nachricht</span>
+      <span class="btn-label">{{ 'ABOUT.BUTTON' | translate }}</span>
     </button>
   </div>
 </section>

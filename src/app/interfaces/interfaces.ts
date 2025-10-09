@@ -17,6 +17,6 @@ export interface Project {
 export interface Testimonial {
   idT: number;
   nameT: string;
-  project: string;
-  text: string;
+  projectKey: string;
+  textKey: string;
 }

@@ -73,9 +73,7 @@
     "ERROR_NAME": "Dein vollständiger Name ist erforderlich.",
     "ERROR_EMAIL": "Deine vollständige E-Mail-Adresse ist erforderlich.",
     "ERROR_MSG": "Bitte eine Nachricht eingeben.",
-    "CONSENT_PREFIX": "Ich habe die",
-    "PRIVACY_LINK": "Datenschutzerklärung",
-    "CONSENT_SUFFIX": "gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
+    "CONSENT": "Ich habe die Datenschutzerklärung gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
     "BUTTON": "Sag' Hallo",
     "SUCCESS": "Danke, deine Nachricht wurde gesendet.",
     "ERROR": "Fehler beim Senden. Bitte später erneut versuchen."
@@ -85,12 +83,7 @@
     "TITLE": "Teamplayer gesucht?",
     "SUBTITLE": "Das sagen meine Kollegen über mich",
     "ARIA": "Testimonials",
-    "PROJECT_PREFIX": "Projekt",
-    "KOCHWELT": "Kochwelt",
-    "BEACHAPP": "BeachApp",
-    "DANIEL": "Mit Sascha zu arbeiten macht Spaß, weil er Kreativität mit Struktur verbindet. Er behält auch in stressigen Phasen den Überblick und motiviert das Team, das Beste aus jedem Projekt herauszuholen.",
-    "PATRICK": "Sascha brachte in Teamarbeiten dank seiner kreativen Impulse, seiner Konzentrationsstärke und seines breiten Wissens einen besonderen Mehrwert ein.",
-    "DAVID": "Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen."
+    "PROJECT_PREFIX": "Projekt"
   },
 
   "FOOTER": {
@@ -100,7 +93,6 @@
     "SOCIAL": { "GITHUB": "GitHub", "CONTACT": "Kontakt", "LINKEDIN": "LinkedIn" },
     "LINKS": { "IMPRINT": "Impressum", "PRIVACY": "Datenschutz" }
   },
-
   "LEGALNOTICE": {
     "TITLE": "Impressum",
     "SUBTITLE": "Angaben gemäß § 5 TMG",

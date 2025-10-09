@@ -8,9 +8,15 @@
 
     <nav class="header-right" aria-label="Hauptnavigation">
       <div class="nav-list">
-        <li><a href="#about">Über mich</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#works">Portfolio</a></li>
+        <li>
+          <a href="#about">{{ 'HEADER.LINKS.ABOUT' | translate }}</a>
+        </li>
+        <li>
+          <a href="#skills">{{ 'HEADER.LINKS.SKILLS' | translate }}</a>
+        </li>
+        <li>
+          <a href="#works">{{ 'HEADER.LINKS.WORKS' | translate }}</a>
+        </li>
       </div>
 
       <div class="lang-switch">
@@ -20,13 +26,18 @@
       </div>
 
       <div class="burger-menu">
-        <button class="burger-button" aria-label="Menü öffnen" (click)="toggleOverlay()">
-          <img src="/icons/burger.png" alt="Bürger-Menü öffnen" />
+        <button
+          class="burger-button"
+          aria-label="{{ 'HEADER.CLOSE_MENU' | translate }}"
+          (click)="toggleOverlay()"
+        >
+          <img src="/icons/burger.png" [alt]="'HEADER.BURGER_ALT_CLOSE' | translate" />
         </button>
       </div>
     </nav>
   </div>
 </header>
+
 <div
   class="header-overlay"
   *ngIf="isOverlayOpen"
@@ -39,15 +50,20 @@
       <a class="logo" href="/">
         <img src="/icons/logo-blue.png" width="80" height="80" alt="Logo" />
       </a>
-      <button class="overlay-close" aria-label="Menü schließen" (click)="toggleOverlay()">
-        <img src="/icons/burger.png" alt="Schließen" />
+      <button
+        class="overlay-close"
+        aria-label="{{ 'HEADER.BURGER.CLOSE' | translate }}"
+        (click)="toggleOverlay()"
+      >
+        <img src="/icons/burger.png" [alt]="'HEADER.BURGER.CLOSE' | translate" />
       </button>
     </div>
 
     <nav class="overlay-nav" aria-label="Overlay Navigation">
-      <a href="#about" (click)="closeOverlay()">Über mich</a>
-      <a href="#skills" (click)="closeOverlay()">Skills</a>
-      <a href="#works" (click)="closeOverlay()">Portfolio</a>
+      <a href="#about" (click)="closeOverlay()">{{ 'HEADER.LINKS.ABOUT' | translate }}</a>
+      <a href="#skills" (click)="closeOverlay()">{{ 'HEADER.LINKS.SKILLS' | translate }}</a>
+      <a href="#works" (click)="closeOverlay()">{{ 'HEADER.LINKS.WORKS' | translate }}</a>
+
       <div class="overlay-lang">
         <a href="/de" class="active" (click)="closeOverlay()">DE</a>
         <span class="sep">/</span>
