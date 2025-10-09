@@ -5,7 +5,6 @@
   overflow-x: clip;
   max-width: 1440px;
   padding: 160px 100px;
-
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
   z-index: 5;
 }
@@ -38,7 +37,6 @@
       top: 750px;
     }
   }
-
   @media (max-width: 900px) {
     &.ellipse2 {
       display: none;
@@ -64,17 +62,15 @@
     font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
     line-height: 0.9;
     text-align: flex-start;
-    margin: 0;
-    margin-bottom: 60px;
+    margin: 0 0 60px 0;
   }
 
   h4 {
     font-family: 'Baloo 2';
     color: #5988ff;
     font-size: clamp(23px, calc(23px + 9 * ((100vw - 320px) / 380)), 32px);
-    margin: 0;
-    align-self: left;
     margin: 38px 0 30px 0;
+    align-self: left;
   }
 
   p {
@@ -116,15 +112,16 @@
 .contact-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 14px;
   padding: 0 0 0 5.55%;
   z-index: 5;
   margin-top: 195px;
 }
 
-.contact-right > input,
-.contact-right > textarea {
+/* Inputs und Textarea (dein Original) */
+.contact-right input,
+.contact-right textarea {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -144,16 +141,33 @@
   }
 }
 
-.contact-right > textarea {
+.contact-right textarea {
   min-height: 220px;
   max-height: 60vh;
   resize: vertical;
   overflow: auto;
 }
 
+.field {
+  position: relative;
+}
+.field input,
+.field textarea {
+  padding-right: 50px;
+}
+.field .field-icon {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .contact-right-check-box {
   font-family: 'Montserrat', system-ui, sans-serif;
-  font-size: 23px;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -188,7 +202,7 @@
 button {
   align-self: center;
   padding: 12px 18px;
-  border: 1px solid #5988ff;
+  border: 2px solid #5988ff;
   border-radius: 10px;
   background: transparent;
   color: #5988ff;
@@ -208,6 +222,26 @@ button {
   }
 }
 
+button:not(:disabled):hover {
+  transform: scale(1.03);
+  background: color-mix(in srgb, #5988ff 99%, transparent);
+  color: #fff;
+}
+button:not(:disabled):focus-visible {
+  outline: 3px solid #5988ff;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  border-color: #a6afbf;
+  color: #a6afbf;
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none;
+  background: transparent;
+  outline: none;
+}
+
 .contact-section {
   max-width: 100%;
   margin: 0 auto;
@@ -224,7 +258,6 @@ button {
       margin-top: 170px;
       margin-bottom: 30px;
     }
-
     h4 {
       margin-top: 10px;
     }
@@ -232,7 +265,7 @@ button {
 
   .contact-right {
     gap: 27px;
-    margin: 0px 0 100px 0;
+    margin: 0 0 100px 0;
   }
 
   .contact-right button,
@@ -246,14 +279,7 @@ button {
 .field-error {
   font: 16px/1.4 'Montserrat', system-ui, sans-serif;
   color: #d21b1b;
-  margin: -6px 0 6px 2px;
-}
-
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none;
-  background: transparent;
+  margin: -25px 0 6px 2px;
 }
 
 [aria-invalid='true']:focus {

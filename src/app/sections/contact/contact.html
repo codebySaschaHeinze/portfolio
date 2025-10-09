@@ -13,16 +13,37 @@
   </div>
 
   <form class="contact-right" [formGroup]="form" (submit)="onSubmit($event)" novalidate>
-    <input
-      #nameInput
-      type="text"
-      placeholder="Dein Name"
-      formControlName="name"
-      (focus)="onFocus('name')"
-      (blur)="onBlur('name')"
-      [attr.aria-invalid]="nameCtrl.invalid"
-      [attr.aria-describedby]="nameCtrl.invalid && nameFocused ? 'name-error' : null"
-    />
+    <!-- Name -->
+    <div class="field">
+      <input
+        #nameInput
+        type="text"
+        placeholder="Dein Name"
+        formControlName="name"
+        (focus)="onFocus('name')"
+        (blur)="onBlur('name')"
+        [attr.aria-invalid]="nameCtrl.invalid"
+        [attr.aria-describedby]="nameCtrl.invalid && nameFocused ? 'name-error' : null"
+      />
+      <img
+        *ngIf="nameCtrl.invalid && nameFocused"
+        class="field-icon is-error"
+        src="/icons/exklamation-mark.png"
+        width="25"
+        height="25"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        *ngIf="nameCtrl.valid && nameFocused"
+        class="field-icon is-valid"
+        src="/icons/check-mark.png"
+        width="25"
+        height="25"
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
     <p
       *ngIf="nameCtrl.invalid && nameFocused"
       id="name-error"
@@ -32,16 +53,37 @@
       Dein vollständiger Name ist erforderlich.
     </p>
 
-    <input
-      #emailInput
-      type="email"
-      placeholder="Deine E-Mail"
-      formControlName="email"
-      (focus)="onFocus('email')"
-      (blur)="onBlur('email')"
-      [attr.aria-invalid]="emailCtrl.invalid"
-      [attr.aria-describedby]="emailCtrl.invalid && emailFocused ? 'email-error' : null"
-    />
+    <!-- E-Mail -->
+    <div class="field">
+      <input
+        #emailInput
+        type="email"
+        placeholder="Deine E-Mail"
+        formControlName="email"
+        (focus)="onFocus('email')"
+        (blur)="onBlur('email')"
+        [attr.aria-invalid]="emailCtrl.invalid"
+        [attr.aria-describedby]="emailCtrl.invalid && emailFocused ? 'email-error' : null"
+      />
+      <img
+        *ngIf="emailCtrl.invalid && emailFocused"
+        class="field-icon is-error"
+        src="/icons/exklamation-mark.png"
+        width="25"
+        height="25"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        *ngIf="emailCtrl.valid && emailFocused"
+        class="field-icon is-valid"
+        src="/icons/check-mark.png"
+        width="25"
+        height="25"
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
     <p
       *ngIf="emailCtrl.invalid && emailFocused"
       id="email-error"
@@ -51,17 +93,38 @@
       Deine vollständige E-Mail-Adresse ist erforderlich.
     </p>
 
-    <textarea
-      #msgInput
-      id="msg"
-      name="message"
-      placeholder="Deine Nachricht"
-      formControlName="message"
-      (focus)="onFocus('message')"
-      (blur)="onBlur('message')"
-      [attr.aria-invalid]="messageCtrl.invalid"
-      [attr.aria-describedby]="messageCtrl.invalid && messageFocused ? 'msg-error' : null"
-    ></textarea>
+    <!-- Nachricht -->
+    <div class="field">
+      <textarea
+        #msgInput
+        id="msg"
+        name="message"
+        placeholder="Deine Nachricht"
+        formControlName="message"
+        (focus)="onFocus('message')"
+        (blur)="onBlur('message')"
+        [attr.aria-invalid]="messageCtrl.invalid"
+        [attr.aria-describedby]="messageCtrl.invalid && messageFocused ? 'msg-error' : null"
+      ></textarea>
+      <img
+        *ngIf="messageCtrl.invalid && messageFocused"
+        class="field-icon is-error"
+        src="/icons/exklamation-mark.png"
+        width="25"
+        height="25"
+        alt=""
+        aria-hidden="true"
+      />
+      <img
+        *ngIf="messageCtrl.valid && messageFocused"
+        class="field-icon is-valid"
+        src="/icons/check-mark.png"
+        width="25"
+        height="25"
+        alt=""
+        aria-hidden="true"
+      />
+    </div>
     <p
       *ngIf="messageCtrl.invalid && messageFocused"
       id="msg-error"
