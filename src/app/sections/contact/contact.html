@@ -8,7 +8,6 @@
       <span>{{ 'CONTACT.PROMO2' | translate }}</span>
     </div>
   </div>
-
   <form
     class="contact-right"
     [formGroup]="form"
@@ -55,7 +54,6 @@
     >
       {{ 'CONTACT.ERROR_NAME' | translate }}
     </p>
-
     <div class="field">
       <input
         name="email"
@@ -95,7 +93,6 @@
     >
       {{ 'CONTACT.ERROR_EMAIL' | translate }}
     </p>
-
     <div class="field">
       <textarea
         #msgInput
@@ -148,14 +145,24 @@
     <button type="submit" [disabled]="form.invalid">
       {{ 'CONTACT.BUTTON' | translate }}
     </button>
-    <div class="overlay success" *ngIf="success" (click)="success = false">
-      <p>{{ 'CONTACT.SUCCESS' | translate }}</p>
+    <div class="overlay success" *ngIf="success" (click)="success = false" aria-live="polite">
+      <div class="overlay-box" (click)="$event.stopPropagation()">
+        <p>{{ 'CONTACT.SUCCESS' | translate }}</p>
+        <button type="button" class="btn" (click)="success = false">
+          <span class="btn-label">{{ 'CONTACT.CLOSE' | translate }}</span>
+        </button>
+      </div>
     </div>
-    <div class="overlay error" *ngIf="error" (click)="error = false">
-      <p>{{ 'CONTACT.ERROR' | translate }}</p>
+
+    <div class="overlay error" *ngIf="error" (click)="error = false" aria-live="polite">
+      <div class="overlay-box" (click)="$event.stopPropagation()">
+        <p>{{ 'CONTACT.ERROR' | translate }}</p>
+        <button type="button" class="btn" (click)="error = false">
+          <span class="btn-label">{{ 'CONTACT.CLOSE' | translate }}</span>
+        </button>
+      </div>
     </div>
   </form>
-
   <img class="big-ellipse ellipse1" src="icons/ellipse-blue-small.png" alt="" />
   <img class="big-ellipse ellipse2" src="icons/ellipse-blue-small.png" alt="" />
   <img class="big-ellipse ellipse3" src="icons/ellipse-blue-small.png" alt="" />

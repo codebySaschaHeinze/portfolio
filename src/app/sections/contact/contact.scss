@@ -7,243 +7,241 @@
   padding: 160px 100px;
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
   z-index: 5;
-}
-
-.big-ellipse {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-
-  &.ellipse1 {
-    width: clamp(70px, calc(70px + 60 * ((100vw - 320px) / 380)), 130px);
-    height: auto;
-    top: 120px;
-    left: 65%;
-  }
-  &.ellipse2 {
-    width: 204px;
-    height: 204px;
-    top: 670px;
-    left: 32%;
-  }
-  &.ellipse3 {
-    width: 73px;
-    height: 73px;
-    bottom: 30px;
-    left: 90%;
-  }
-  @media (max-width: 1370px) {
-    &.ellipse2 {
-      top: 750px;
-    }
-  }
-  @media (max-width: 900px) {
-    &.ellipse2 {
-      display: none;
-    }
-    &.ellipse3 {
-      left: 80%;
-      bottom: 10px;
-    }
-  }
-}
-
-.contact-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  border-radius: 12px;
-  margin: 0 5.55% 0 5.55%;
-  z-index: 5;
-
-  h3 {
-    font-family: 'Baloo 2';
-    color: #5988ff;
-    font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
-    line-height: 0.9;
-    text-align: flex-start;
-    margin: 0 0 60px 0;
-  }
-
-  h4 {
-    font-family: 'Baloo 2';
-    color: #5988ff;
-    font-size: clamp(23px, calc(23px + 9 * ((100vw - 320px) / 380)), 32px);
-    margin: 38px 0 30px 0;
-    align-self: left;
-  }
-
-  p {
-    font-family: 'Montserrat';
-    color: black;
-    font-size: 16px;
-    margin: 5px 0 35px 0;
-  }
-
-  .contact-left-contact-me {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    justify-self: start;
-    z-index: 5;
-  }
-
-  .contact-left-contact-me > span {
-    padding: 8px 2px;
-    color: #5988ff;
-  }
-
-  .contact-left-contact-me > span:first-of-type {
-    font-family: 'Montserrat', system-ui, sans-serif;
-    font-weight: 100;
-    font-size: 16px;
-    z-index: 5;
-  }
-
-  .contact-left-contact-me > span:last-of-type {
-    font-family: 'Baloo 2', system-ui, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    z-index: 5;
-  }
-}
-
-.contact-right {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 14px;
-  padding: 0 0 0 5.55%;
-  z-index: 5;
-  margin-top: 195px;
-}
-
-.contact-right input,
-.contact-right textarea {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 12px 14px;
-  border: 2px solid #5988ff;
-  border-radius: 10px;
-  background: #ffffff;
-  color: #000;
-  font: 1rem/1.4 'Montserrat', system-ui, sans-serif;
-  outline: none;
-
-  &::placeholder {
-    color: #000;
-  }
-  &:focus {
-    border: 3px solid #5988ff;
-  }
-}
-
-.contact-right textarea {
-  min-height: 220px;
-  max-height: 60vh;
-  resize: vertical;
-  overflow: auto;
-}
-
-.field {
-  position: relative;
-}
-.field input,
-.field textarea {
-  padding-right: 50px;
-}
-.field .field-icon {
-  position: absolute;
-  right: 10px;
-  top: 13px;
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.contact-right-check-box {
-  font-family: 'Montserrat', system-ui, sans-serif;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  font-size: 16px;
-  color: black;
-
-  input[type='checkbox'] {
-    flex: 0 0 auto;
-    width: 18px;
-    height: 18px;
-    margin-top: 2px;
-    accent-color: #5988ff;
-    border-color: #5988ff;
-  }
-
-  a {
-    color: #5988ff;
-    text-decoration: none;
-    font-family: 'Montserrat', system-ui, sans-serif;
-    font-size: 16px;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  p {
-    margin: 0;
-  }
-}
-
-button {
-  align-self: center;
-  padding: 12px 18px;
-  border: 2px solid #5988ff;
-  border-radius: 10px;
-  background: transparent;
-  color: #5988ff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.15s ease, background-color 0.15s ease;
-  z-index: 5;
-
-  &:hover {
-    transform: scale(1.03);
-    background: color-mix(in srgb, #5988ff 99%, transparent);
-    color: #ffffff;
-  }
-  &:focus-visible {
-    outline: 3px solid #5988ff;
-    outline-offset: 2px;
-  }
-}
-
-button:not(:disabled):hover {
-  transform: scale(1.03);
-  background: color-mix(in srgb, #5988ff 99%, transparent);
-  color: #fff;
-}
-button:not(:disabled):focus-visible {
-  outline: 3px solid #5988ff;
-  outline-offset: 2px;
-}
-
-button:disabled {
-  border-color: #a6afbf;
-  color: #a6afbf;
-  opacity: 1;
-  cursor: not-allowed;
-  transform: none;
-  background: transparent;
-  outline: none;
-}
-
-.contact-section {
   max-width: 100%;
   margin: 0 auto;
+
+  .big-ellipse {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &.ellipse1 {
+      width: clamp(70px, calc(70px + 60 * ((100vw - 320px) / 380)), 130px);
+      height: auto;
+      top: 120px;
+      left: 65%;
+    }
+    &.ellipse2 {
+      width: 204px;
+      height: 204px;
+      top: 670px;
+      left: 32%;
+    }
+    &.ellipse3 {
+      width: 73px;
+      height: 73px;
+      bottom: 30px;
+      left: 90%;
+    }
+
+    @media (max-width: 1370px) {
+      &.ellipse2 {
+        top: 750px;
+      }
+    }
+    @media (max-width: 900px) {
+      &.ellipse2 {
+        display: none;
+      }
+      &.ellipse3 {
+        left: 80%;
+        bottom: 10px;
+      }
+    }
+  }
+
+  .contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 12px;
+    margin: 0 5.55%;
+    z-index: 5;
+
+    h3 {
+      font-family: 'Baloo 2';
+      color: #5988ff;
+      font-size: clamp(45px, calc(45px + 51 * ((100vw - 320px) / 380)), 96px);
+      line-height: 0.9;
+      text-align: flex-start;
+      margin: 0 0 60px 0;
+    }
+
+    h4 {
+      font-family: 'Baloo 2';
+      color: #5988ff;
+      font-size: clamp(23px, calc(23px + 9 * ((100vw - 320px) / 380)), 32px);
+      margin: 38px 0 30px 0;
+      align-self: left;
+    }
+
+    p {
+      font-family: 'Montserrat';
+      color: black;
+      font-size: 16px;
+      margin: 5px 0 35px 0;
+    }
+
+    .contact-left-contact-me {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0;
+      justify-self: start;
+      z-index: 5;
+
+      > span {
+        padding: 8px 2px;
+        color: #5988ff;
+
+        &:first-of-type {
+          font-family: 'Montserrat', system-ui, sans-serif;
+          font-weight: 100;
+          font-size: 16px;
+          z-index: 5;
+        }
+        &:last-of-type {
+          font-family: 'Baloo 2', system-ui, sans-serif;
+          font-weight: 600;
+          font-size: 16px;
+          z-index: 5;
+        }
+      }
+    }
+  }
+
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 0 0 0 5.55%;
+    z-index: 5;
+    margin-top: 195px;
+
+    input,
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 12px 14px;
+      border: 2px solid #5988ff;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #000;
+      font: 1rem/1.4 'Montserrat', system-ui, sans-serif;
+      outline: none;
+
+      &::placeholder {
+        color: #000;
+      }
+      &:focus {
+        border: 3px solid #5988ff;
+      }
+    }
+
+    textarea {
+      min-height: 220px;
+      max-height: 60vh;
+      resize: vertical;
+      overflow: auto;
+    }
+
+    .field {
+      position: relative;
+
+      input,
+      textarea {
+        padding-right: 50px;
+      }
+
+      .field-icon {
+        position: absolute;
+        right: 10px;
+        top: 13px;
+        width: 25px;
+        height: 25px;
+        object-fit: contain;
+        pointer-events: none;
+        z-index: 1;
+      }
+    }
+
+    .contact-right-check-box {
+      font-family: 'Montserrat', system-ui, sans-serif;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 16px;
+      color: black;
+
+      input[type='checkbox'] {
+        flex: 0 0 auto;
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        accent-color: #5988ff;
+        border-color: #5988ff;
+      }
+
+      a {
+        color: #5988ff;
+        text-decoration: none;
+        font-family: 'Montserrat', system-ui, sans-serif;
+        font-size: 16px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    button {
+      align-self: center;
+      padding: 12px 18px;
+      border: 2px solid #5988ff;
+      border-radius: 10px;
+      background: transparent;
+      color: #5988ff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      z-index: 5;
+
+      &:hover {
+        transform: scale(1.03);
+        background: color-mix(in srgb, #5988ff 99%, transparent);
+        color: #ffffff;
+      }
+      &:focus-visible {
+        outline: 3px solid #5988ff;
+        outline-offset: 2px;
+      }
+
+      &:not(:disabled):hover {
+        transform: scale(1.03);
+        background: color-mix(in srgb, #5988ff 99%, transparent);
+        color: #fff;
+      }
+      &:not(:disabled):focus-visible {
+        outline: 3px solid #5988ff;
+        outline-offset: 2px;
+      }
+      &:disabled {
+        border-color: #a6afbf;
+        color: #a6afbf;
+        opacity: 1;
+        cursor: not-allowed;
+        transform: none;
+        background: transparent;
+        outline: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 900px) {
@@ -265,13 +263,13 @@ button:disabled {
   .contact-right {
     gap: 27px;
     margin: 0 0 100px 0;
-  }
 
-  .contact-right button,
-  .contact-section .contact-right .btn {
-    align-self: center;
-    margin: 0 auto;
-    display: inline-flex;
+    button,
+    .btn {
+      align-self: center;
+      margin: 0 auto;
+      display: inline-flex;
+    }
   }
 }
 
@@ -288,10 +286,7 @@ button:disabled {
 
 .overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -299,10 +294,88 @@ button:disabled {
   color: white;
   font-size: 1.2rem;
   cursor: pointer;
-}
-.overlay.success {
-  background: rgba(0, 128, 0, 0.8);
-}
-.overlay.error {
-  background: rgba(128, 0, 0, 0.8);
+  z-index: 9999;
+
+  .overlay-box {
+    cursor: default;
+    width: 20vw;
+    height: 20vh;
+    padding: 20px 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #0043f0;
+    border: 2px solid #5988ff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Montserrat', system-ui, sans-serif;
+
+    .btn {
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+      border: 2px solid #5988ff;
+      border-radius: 10px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      .btn-label {
+        font-size: 18px;
+        color: #5988ff;
+        position: relative;
+        z-index: 3;
+        transition: color 0.12s ease;
+        text-align: center;
+        text-wrap: nowrap;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background-color: rgba(0, 0, 0, 0);
+        transform: translate(-50%, -50%);
+        transition: width 0.12s ease, height 0.12s ease, background-color 0.12s ease;
+        z-index: 2;
+      }
+
+      &:hover {
+        transform: scale(1.04);
+
+        .btn-label {
+          color: #fff;
+        }
+        &::before {
+          width: 250%;
+          height: 250%;
+          background-color: #5988ff;
+        }
+      }
+    }
+  }
+
+  &.success .overlay-box {
+    border-color: #5988ff;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    box-shadow: 0 0 0 4px rgba(89, 136, 255, 0.15), 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  &.error .overlay-box {
+    border-color: #0043f0;
+    font-family: 'Montserrat', system-ui, sans-serif;
+    box-shadow: 0 0 0 4px rgba(0, 67, 240, 0.15), 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
 }
