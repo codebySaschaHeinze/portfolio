@@ -4,28 +4,26 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0 auto 60px;
 
-  margin: 0 auto;
-  margin-bottom: 60px;
-
+  /* Ellipsen */
   .big-ellipse {
     position: absolute;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    top: 0px;
+    top: 0;
+    left: 50%;
     width: 208px;
     height: 208px;
-
-    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   .small-ellipse {
     position: absolute;
-    z-index: 1;
     top: 60px;
+    left: 75%;
     width: 82px;
     height: 82px;
-    left: 75%;
+    z-index: 1;
 
     @media (max-width: 500px) {
       width: 65px;
@@ -35,10 +33,11 @@
     }
   }
 
+  /* Spalten */
   .about-left,
   .about-right {
     flex: 1 1 50%;
-    margin: 170px 5.55% 0px 5.55%;
+    margin: 170px 5.55% 0 5.55%;
   }
 
   .about-left {
@@ -52,10 +51,10 @@
       font-family: 'Baloo 2';
       color: #5988ff;
       font-size: clamp(52px, calc(52px + 51 * ((100vw - 320px) / 380)), 121px);
-      line-height: 0.9;
       line-height: 1;
       margin-bottom: 50px;
     }
+
     h4 {
       font-family: 'Baloo 2';
       color: #5988ff;
@@ -90,7 +89,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-top: 0px;
+        margin-top: 0;
         padding: 30px;
 
         @media (max-width: 1150px) {
@@ -114,25 +113,27 @@
       background-position: center;
       background-repeat: no-repeat;
       background-image: url('/icons/location-default.png');
-    }
-    .img-1:hover {
-      background-size: contain;
-      background-image: url('/icons/location-hover.png');
+
+      &:hover {
+        background-size: contain;
+        background-image: url('/icons/location-hover.png');
+      }
     }
 
     .img-2 {
       position: relative;
+      top: -6px;
       width: 56px;
       height: 49.1px;
-      top: -6px;
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
       background-image: url('/icons/remote-default.png');
-    }
-    .img-2:hover {
-      background-size: contain;
-      background-image: url('/icons/remote-hover.png');
+
+      &:hover {
+        background-size: contain;
+        background-image: url('/icons/remote-hover.png');
+      }
     }
   }
 
@@ -150,18 +151,6 @@
       margin: 30px 8.55%;
     }
 
-    .about-right > div:last-child {
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
-
-    .about-right button {
-      margin: 0;
-      align-self: flex-start;
-    }
-
     p {
       font-family: 'Montserrat';
       color: black;
@@ -169,19 +158,31 @@
       line-height: 120%;
     }
 
+    a {
+      font-family: 'Montserrat';
+      color: black;
+      font-size: 23px;
+      line-height: 120%;
+      text-decoration: none;
+    }
+
     .btn {
       position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       overflow: hidden;
       background: transparent;
       border: 2px solid #5988ff;
       border-radius: 10px;
       padding: 15px;
       cursor: pointer;
+      text-decoration: none; /* Anker reset */
       transition: transform 0.12s ease;
 
       .btn-label {
         font-size: 21px;
-        color: var(--color-accent);
+        color: #5988ff;
         position: relative;
         z-index: 3;
         transition: color 0.12s ease;
@@ -221,12 +222,15 @@
 @media (max-width: 1150px) {
   .about-section {
     flex-direction: column;
-  }
-  /* On smaller screens make the action button centered horizontally */
-  .about-section .about-right > button,
-  .about-section .about-right .btn {
-    align-self: center;
-    margin-left: 0;
-    margin-right: 0;
+
+    .about-right {
+      align-items: center;
+
+      .btn {
+        align-self: center;
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
   }
 }
