@@ -14,6 +14,7 @@
     font-size: 23px;
     text-align: center;
   }
+
   a {
     font-family: 'Montserrat';
     color: white;
@@ -75,8 +76,10 @@
     background-repeat: no-repeat;
     cursor: pointer;
   }
+
   .img-1 {
     background-image: url('/icons/git-white.png');
+
     &:hover {
       transform: scale(1.05);
       filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.4));
@@ -85,6 +88,7 @@
 
   .img-2 {
     background-image: url('/icons/email-white.png');
+
     &:hover {
       transform: scale(1.03);
       filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.4));
@@ -93,6 +97,7 @@
 
   .img-3 {
     background-image: url('/icons/linkedin-white.png');
+
     &:hover {
       transform: scale(1.03);
       filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.4));
@@ -104,7 +109,7 @@
   .footer-top {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 0;
   }
 
   .footer-name {
