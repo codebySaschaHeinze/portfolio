@@ -78,7 +78,8 @@
     "CONSENT_SUFFIX": "gelesen und stimme der darin beschriebenen Verarbeitung meiner Daten zu.",
     "BUTTON": "Sag' Hallo",
     "SUCCESS": "Danke, deine Nachricht wurde gesendet.",
-    "ERROR": "Fehler beim Senden. Bitte später erneut versuchen."
+    "ERROR": "Fehler beim Senden. Bitte später erneut versuchen.",
+    "CLOSE": "Schließen"
   },
 
   "TESTIMONIALS": {
