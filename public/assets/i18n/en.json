@@ -140,7 +140,7 @@
     },
     "HOSTING": {
       "TITLE": "Hosting",
-      "TEXT": "This website is provided via GitHub Pages, a service of GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Data processing is based on a legitimate interest in the secure and efficient provision of the website (Art. 6(1)(f) GDPR). GitHub may collect access data (e.g. IP address, date and time) to ensure technical operation. Further information can be found in the",
+      "TEXT": "My website is hosted by IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Germany. IONOS processes personal data (e.g., server log files) to ensure the secure and stable operation of the website. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in the secure provision of the website).",
       "LINK_TEXT": "GitHub Privacy Statement"
     },
     "ACCESS_DATA": {
