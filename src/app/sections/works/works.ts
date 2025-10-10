@@ -33,9 +33,15 @@ export class Works {
     },
   ];
 
-  openExternal(url: string) {
-    if (!url) return;
-    const win = window.open(url, '_blank', 'noopener,noreferrer');
-    if (win) win.opener = null;
+  openExternal(url?: string) {
+    if (!url) {
+      return;
+    }
+    window.open(url, '_blank', 'noopener');
   }
+
+  links = {
+    elpolloloco: 'https://elpolloloco.saschaheinze.de',
+    pokedex: 'https://pokedex.saschaheinze.de',
+  };
 }

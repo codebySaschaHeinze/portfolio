@@ -8,20 +8,45 @@
     @for (project of projects; track project.idP) {
     <div class="works-row" [class.reverse]="$index % 2 === 1">
       <div class="works-left">
-        <a><img [src]="project.projectImg" [alt]="project.title | translate" /></a>
+        <!-- Bild als Link zur Live-Demo -->
+        <a
+          class="work-card"
+          [href]="project.liveLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="(project.title | translate) + ' öffnen'"
+        >
+          <img [src]="project.projectImg" [alt]="project.title | translate" />
+        </a>
       </div>
+
       <div class="works-right">
         <h4>{{ project.title | translate }}</h4>
         <span>{{ project.set.join(' | ') }}</span>
         <p>{{ project.description | translate }}</p>
-        <div class="work-actions">
-          <button type="button" (click)="openExternal(project.githubLink)" class="btn">
-            <span class="btn-label">{{ 'WORKS.BUTTON_GITHUB' | translate }}</span>
-          </button>
 
-          <button type="button" (click)="openExternal(project.liveLink)" class="btn alt">
+        <div class="work-actions">
+          <!-- GitHub -->
+          <a
+            class="btn"
+            [href]="project.githubLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub öffnen"
+          >
+            <span class="btn-label">{{ 'WORKS.BUTTON_GITHUB' | translate }}</span>
+          </a>
+
+          <!-- Live-Demo -->
+          <a
+            class="btn alt"
+            [href]="project.liveLink"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Live-Demo öffnen"
+          >
             <span class="btn-label">{{ 'WORKS.BUTTON_LIVE' | translate }}</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
