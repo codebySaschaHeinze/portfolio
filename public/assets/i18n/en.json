@@ -98,7 +98,7 @@
     "COPY": "© Sascha Heinze {{year}}",
     "SOCIAL_ARIA": "Social links",
     "SOCIAL": { "GITHUB": "GitHub", "CONTACT": "Contact", "LINKEDIN": "LinkedIn" },
-    "LINKS": { "IMPRINT": "Imprint", "PRIVACY": "Privacy Policy" }
+    "LINKS": { "IMPRINT": "Legal notice", "PRIVACY": "Privacy Policy" }
   },
 
   "LEGALNOTICE": {
