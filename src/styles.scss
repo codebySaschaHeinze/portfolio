@@ -1,4 +1,3 @@
-/* Reset: avoid globally centering every element (was causing unexpected centering) */
 *,
 *::before,
 *::after {
@@ -9,17 +8,6 @@
 
 html {
   scroll-behavior: smooth;
-}
-
-/* Project variables */
-:root {
-  --color-accent: #5988ff;
-}
-
-/* Ensure button labels default to the project's accent color */
-.btn .btn-label,
-button {
-  color: var(--color-accent);
 }
 
 @font-face {

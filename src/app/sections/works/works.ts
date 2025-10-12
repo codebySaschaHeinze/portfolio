@@ -19,7 +19,7 @@ export class Works {
       set: ['JavaScript', 'HTML', 'CSS'],
       github: 'GitHub',
       githubLink: 'https://github.com/codebySaschaHeinze/el-pollo-loco.git',
-      liveLink: 'https://elpolloloco.saschaheinze.dev',
+      liveLink: 'https://elpolloloco.saschaheinze.de',
     },
     {
       idP: 2,
@@ -29,7 +29,7 @@ export class Works {
       set: ['JavaScript', 'API', 'HTML', 'CSS'],
       github: 'GitHub',
       githubLink: 'https://github.com/codebySaschaHeinze/PokeDex.git',
-      liveLink: 'https://pokedex.saschaheinze.dev',
+      liveLink: 'https://pokedex.saschaheinze.de',
     },
   ];
 

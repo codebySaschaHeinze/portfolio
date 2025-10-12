@@ -19,7 +19,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class ContactComponent {
+export class Contact {
   form: FormGroup;
   success = false;
   error = false;
