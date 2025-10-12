@@ -4,7 +4,7 @@
   flex-direction: row;
   overflow-x: clip;
   max-width: 1440px;
-  padding: 160px 100px;
+  padding: 160px 5.55%;
   background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
   z-index: 5;
   max-width: 100%;
@@ -55,7 +55,7 @@
     flex-direction: column;
     align-items: flex-start;
     border-radius: 12px;
-    margin: 0 5.55%;
+
     z-index: 5;
 
     h3 {
