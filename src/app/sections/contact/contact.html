@@ -8,13 +8,17 @@
       <span>{{ 'CONTACT.PROMO2' | translate }}</span>
     </div>
   </div>
-  <form
-    class="contact-right"
-    [formGroup]="form"
-    (submit)="onSubmit($event)"
-    action="https://formspree.io/f/xnngbelj"
-    method="POST"
-  >
+
+  <form class="contact-right" [formGroup]="form" (submit)="onSubmit($event)">
+    <!-- Honeypot -->
+    <input
+      type="text"
+      name="website"
+      tabindex="-1"
+      autocomplete="off"
+      style="position: absolute; left: -9999px; opacity: 0"
+    />
+
     <div class="field">
       <input
         name="name"
@@ -54,6 +58,7 @@
     >
       {{ 'CONTACT.ERROR_NAME' | translate }}
     </p>
+
     <div class="field">
       <input
         name="email"
@@ -93,6 +98,7 @@
     >
       {{ 'CONTACT.ERROR_EMAIL' | translate }}
     </p>
+
     <div class="field">
       <textarea
         #msgInput
@@ -132,19 +138,22 @@
     >
       {{ 'CONTACT.ERROR_MSG' | translate }}
     </p>
+
     <div class="contact-right-check-box">
       <input type="checkbox" id="contact-check-box" formControlName="consent" />
       <label for="contact-check-box" class="consent">
         {{ 'CONTACT.CONSENT_PREFIX' | translate }}
-        <a [routerLink]="['/datenschutz']" routerLinkActive="active">{{
-          'CONTACT.PRIVACY_LINK' | translate
-        }}</a>
+        <a [routerLink]="['/datenschutz']" routerLinkActive="active">
+          {{ 'CONTACT.PRIVACY_LINK' | translate }}
+        </a>
         {{ 'CONTACT.CONSENT_SUFFIX' | translate }}
       </label>
     </div>
+
     <button type="submit" [disabled]="form.invalid">
       {{ 'CONTACT.BUTTON' | translate }}
     </button>
+
     <div class="overlay success" *ngIf="success" (click)="success = false" aria-live="polite">
       <div class="overlay-box" (click)="$event.stopPropagation()">
         <p>{{ 'CONTACT.SUCCESS' | translate }}</p>
@@ -163,6 +172,7 @@
       </div>
     </div>
   </form>
+
   <img class="big-ellipse ellipse1" src="icons/ellipse-blue-small.png" alt="" />
   <img class="big-ellipse ellipse2" src="icons/ellipse-blue-small.png" alt="" />
   <img class="big-ellipse ellipse3" src="icons/ellipse-blue-small.png" alt="" />

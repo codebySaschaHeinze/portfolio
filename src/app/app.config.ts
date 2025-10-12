@@ -18,7 +18,7 @@ class JsonTranslateLoader implements TranslateLoader {
 }
 
 function initLangFactory(lang: LangService) {
-  return () => lang.init(); // liest localStorage.lang, sonst 'de'
+  return () => lang.init();
 }
 
 export const appConfig: ApplicationConfig = {

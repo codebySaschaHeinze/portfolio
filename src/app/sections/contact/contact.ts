@@ -19,103 +19,80 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
-  private fb = inject(FormBuilder);
-
-  form = this.fb.group({
-    name: ['', [Validators.required, this.nameValidator()]],
-    email: ['', [Validators.required, Validators.email]],
-    message: ['', [Validators.required, this.messageValidator()]],
-    consent: [false, [Validators.requiredTrue]],
-  });
+export class ContactComponent {
+  form: FormGroup;
+  success = false;
+  error = false;
 
   nameFocused = false;
   emailFocused = false;
   messageFocused = false;
 
-  @ViewChild('nameInput') nameEl!: ElementRef<HTMLInputElement>;
-  @ViewChild('emailInput') emailEl!: ElementRef<HTMLInputElement>;
-  @ViewChild('msgInput') msgEl!: ElementRef<HTMLTextAreaElement>;
+  private apiUrl = '/api/contact.php';
 
-  get nameCtrl() {
-    return this.form.controls.name;
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      name: ['', [Validators.required, Validators.maxLength(120)]],
+      email: ['', [Validators.required, Validators.email, Validators.maxLength(254)]],
+      message: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(5000)]],
+      consent: [false, [Validators.requiredTrue]],
+    });
   }
-  get emailCtrl() {
-    return this.form.controls.email;
+
+  get nameCtrl(): AbstractControl {
+    return this.form.get('name')!;
   }
-  get messageCtrl() {
-    return this.form.controls.message;
+  get emailCtrl(): AbstractControl {
+    return this.form.get('email')!;
   }
-  get consentCtrl() {
-    return this.form.controls.consent;
+  get messageCtrl(): AbstractControl {
+    return this.form.get('message')!;
   }
 
   onFocus(field: 'name' | 'email' | 'message') {
-    this[`${field}Focused`] = true;
+    if (field === 'name') this.nameFocused = true;
+    if (field === 'email') this.emailFocused = true;
+    if (field === 'message') this.messageFocused = true;
   }
+
   onBlur(field: 'name' | 'email' | 'message') {
-    this[`${field}Focused`] = false;
+    if (field === 'name') this.nameFocused = this.nameCtrl.invalid;
+    if (field === 'email') this.emailFocused = this.emailCtrl.invalid;
+    if (field === 'message') this.messageFocused = this.messageCtrl.invalid;
   }
 
-  private nameValidator(): ValidatorFn {
-    return (c: AbstractControl): ValidationErrors | null => {
-      const v = String(c.value || '')
-        .trim()
-        .replace(/\s+/g, ' ');
-      const parts = v.split(' ').filter(Boolean);
-      if (parts.length < 2) return { name: true };
-      const allowedWord = /^[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß'-]*$/;
-      for (const w of parts) {
-        const letters = w.replace(/[^A-Za-zÄÖÜäöüß]/g, '');
-        if (letters.length < 2 || !allowedWord.test(w)) return { name: true };
-      }
-      return null;
+  async onSubmit(e: Event) {
+    e.preventDefault();
+    if (this.form.invalid) return;
+
+    const payload = {
+      name: this.nameCtrl.value,
+      email: this.emailCtrl.value,
+      message: this.messageCtrl.value,
+      website: '',
     };
-  }
-
-  private messageValidator(): ValidatorFn {
-    return (c: AbstractControl): ValidationErrors | null => {
-      const v = String(c.value || '').trim();
-      return /[A-Za-zÄÖÜäöüß]/.test(v) ? null : { msg: true };
-    };
-  }
-
-  sending = false;
-  success = false;
-  error = false;
-
-  async onSubmit(ev: Event) {
-    if (!this.form.valid) {
-      ev.preventDefault();
-      return;
-    }
-
-    ev.preventDefault();
-    this.sending = true;
-    this.success = false;
-    this.error = false;
 
     try {
-      const formEl = ev.target as HTMLFormElement;
-      const data = new FormData(formEl);
-
-      const res = await fetch(formEl.action, {
+      const res = await fetch(this.apiUrl, {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        credentials: 'same-origin',
       });
+      const data: any = await res.json().catch(() => ({}));
 
-      if (res.ok) {
+      if (res.ok && data?.ok) {
         this.success = true;
-        this.form.reset();
-        formEl.reset();
+        this.error = false;
+        this.form.reset({ consent: false });
+        this.nameFocused = this.emailFocused = this.messageFocused = false;
       } else {
+        this.success = false;
         this.error = true;
       }
     } catch {
+      this.success = false;
       this.error = true;
-    } finally {
-      this.sending = false;
     }
   }
 }
