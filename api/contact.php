@@ -28,7 +28,7 @@ if (!$data) { $data = $_POST; }
 $name  = trim($data['name'] ?? '');
 $email = trim($data['email'] ?? '');
 $msg   = trim($data['message'] ?? '');
-$hp    = trim($data['website'] ?? ''); // Honeypot
+$hp    = trim($data['website'] ?? '');
 
 if ($hp !== '') { http_response_code(400); echo json_encode(['ok'=>false,'error'=>'bot']); exit; }
 if ($name === '' || $email === '' || $msg === '') {
@@ -38,7 +38,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   http_response_code(400); echo json_encode(['ok'=>false,'error'=>'email']); exit;
 }
 
-$to      = 'kontakt@saschaheinze.de'; 
+$to      = 'kontakt.saschaheinze.de'; 
 $from    = 'noreply@saschaheinze.de';
 $subject = 'Neue Kontaktanfrage von ' . $name;
 $replyTo = $email;
@@ -52,13 +52,7 @@ $headers = [
   'X-Mailer: PHP/' . phpversion(),
 ];
 
-$ok = @mail(
-  $to,
-  '=?UTF-8?B?' . base64_encode($subject) . '?=',
-  $body,
-  implode("\r\n", $headers),
-  '-f ' . $from
-);
+$ok = @mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $body, implode("\r\n",$headers), '-f '.$from);
 
 if ($ok) { echo json_encode(['ok'=>true]); }
 else { http_response_code(500); echo json_encode(['ok'=>false,'error'=>'send_failed']); }
