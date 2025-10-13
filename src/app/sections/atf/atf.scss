@@ -1,12 +1,24 @@
+.atf-background-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+}
+
 .atf-section {
   position: relative;
+  max-width: 1920px;
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  background: linear-gradient(to bottom, #fffcf3 0%, #d3e3fa 100%);
-  z-index: 5;
   overflow-x: clip;
   overflow-y: clip;
 
@@ -36,9 +48,16 @@
       height: auto;
     }
 
+    @media (max-width: 950px) {
+      top: -10%;
+      left: -48%;
+      width: 144vw;
+      height: auto;
+    }
+
     @media (max-width: 750px) {
       top: -10%;
-      left: -50%;
+      left: -48%;
       width: 144vw;
       height: auto;
     }
@@ -51,28 +70,28 @@
       width: 194vw;
       height: auto;
       top: -12%;
-      left: -105%;
+      left: -98%;
     }
 
     @media (max-width: 400px) {
       width: 217vw;
       height: auto;
       top: -10%;
-      left: -130%;
+      left: -122%;
     }
 
     @media (max-width: 350px) {
       width: 239vw;
       height: auto;
       top: -4%;
-      left: -155%;
+      left: -145%;
     }
 
     @media (max-width: 320px) {
       width: 248vw;
       height: auto;
       top: -4%;
-      left: -165%;
+      left: -155%;
     }
   }
 
@@ -173,7 +192,6 @@
 
   .img-1 {
     background-image: url('/icons/git-default.png');
-
     &:hover {
       background-image: url('/icons/git-hover.png');
     }
@@ -181,7 +199,6 @@
 
   .img-2 {
     background-image: url('/icons/email-default.png');
-
     &:hover {
       background-image: url('/icons/email-hover.png');
     }
@@ -189,7 +206,6 @@
 
   .img-3 {
     background-image: url('/icons/linkedin-default.png');
-
     &:hover {
       background-image: url('/icons/linkedin-hover.png');
     }
@@ -263,7 +279,7 @@
 
   .atf-text {
     color: white;
-    margin-top: 0px;
+    margin-top: -450px;
 
     h1,
     p {

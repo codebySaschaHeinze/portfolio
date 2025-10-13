@@ -1,9 +1,10 @@
 .works-section {
   position: relative;
   width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
   display: flex;
-  overflow-x: clip;
+
   flex-direction: column;
 
   .h3-and-p {

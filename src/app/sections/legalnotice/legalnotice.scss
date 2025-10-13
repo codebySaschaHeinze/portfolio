@@ -1,11 +1,12 @@
 .legal-notice-section {
   position: relative;
-  max-width: 100%;
+  max-width: 1920px;
+  width: 100%;
   padding: 150px clamp(5.55%, 10vw, 11%) 50px;
-  overflow: clip;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 h2 {

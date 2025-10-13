@@ -1,6 +1,18 @@
-.skills-section {
+.skills-background-wrapper {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   background: linear-gradient(to bottom right, #0043f0 0%, #4679fa 50%, #0043f0 100%);
+  display: flex;
+  justify-content: center;
+}
+
+.skills-section {
   width: 100%;
+  max-width: 1920px;
   margin: 0 auto;
   text-align: center;
   justify-content: center;

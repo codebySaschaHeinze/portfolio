@@ -1,11 +1,13 @@
 .privacy-policy-section {
   position: relative;
-  max-width: 100%;
+  max-width: 1920px;
+  width: 100%;
   padding: 150px clamp(5.55%, 10vw, 11%) 50px;
-  overflow: clip;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 h2 {
@@ -38,6 +40,7 @@ a {
   z-index: 2;
   white-space: normal;
   overflow-wrap: anywhere;
+
   &:hover {
     text-decoration: underline;
   }
@@ -73,6 +76,7 @@ a {
     left: 0%;
   }
 }
+
 @media (max-width: 850px) {
   .ellipse2,
   .ellipse3,
@@ -83,11 +87,9 @@ a {
   h2 {
     margin: 50px 0 30px 0;
   }
-
   h4 {
     margin-top: 20px;
   }
-
   p {
     margin: 0 0 13px 0;
   }

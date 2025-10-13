@@ -1,11 +1,13 @@
-<section id="skills" class="skills-section" [attr.aria-label]="'SKILLS.ARIA' | translate">
-  <h3>{{ 'SKILLS.TITLE' | translate }}</h3>
-  <ul class="skill-ul">
-    @for (skill of skills; track skill.nameS) {
-    <li class="skill-li">
-      <img [src]="skill.icon" [alt]="skill.nameS" />
-      <span class="skill-name">{{ skill.nameS }}</span>
-    </li>
-    }
-  </ul>
-</section>
+<div class="skills-background-wrapper">
+  <section id="skills" class="skills-section" [attr.aria-label]="'SKILLS.ARIA' | translate">
+    <h3>{{ 'SKILLS.TITLE' | translate }}</h3>
+    <ul class="skill-ul">
+      @for (skill of skills; track skill.nameS) {
+      <li class="skill-li">
+        <img [src]="skill.icon" [alt]="skill.nameS" />
+        <span class="skill-name">{{ skill.nameS }}</span>
+      </li>
+      }
+    </ul>
+  </section>
+</div>
