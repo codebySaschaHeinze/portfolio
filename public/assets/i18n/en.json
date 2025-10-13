@@ -149,7 +149,7 @@
     },
     "CONTACT_FORM": {
       "TITLE": "Contact Form",
-      "TEXT": "If you send me a message via the contact form, it will be forwarded by email to the website operator. Providing an email address is required to enable a reply. Processing takes place on the basis of Art. 6(1)(a) GDPR (consent) or, if there is a legitimate interest in contacting, on the basis of Art. 6(1)(f) GDPR. The data will not be stored or shared."
+      "TEXT": "If you send me a message via the contact form, it will be transmitted by email to the website operator and stored on the mail servers. Providing an email address is required in order to respond to your inquiry. The processing is carried out on the basis of Art. 6(1)(b) GDPR (for handling an inquiry or for taking steps prior to entering into a contract). If no contractual relationship arises, the processing may also be based on Art. 6(1)(f) GDPR (legitimate interest in handling inquiries). The data will not be passed on to third parties without your consent and will be deleted after the request has been processed, unless statutory retention obligations apply."
     },
     "FONTS": {
       "TITLE": "Fonts",
