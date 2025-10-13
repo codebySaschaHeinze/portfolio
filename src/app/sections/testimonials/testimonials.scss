@@ -111,12 +111,13 @@
     }
 
     .testimonials-container .testimonial-single {
-      width: clamp(260px, 85vw, 340px);
+      width: clamp(260px, 80vw, 340px);
       flex: 0 0 auto;
       scroll-snap-align: center;
       min-width: 200px;
       padding: 0;
-      margin-bottom: 40px;
+      margin-bottom: 80px;
+      padding: 0 5%;
     }
   }
 }
