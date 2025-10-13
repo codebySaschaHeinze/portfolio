@@ -13,7 +13,7 @@ export class Works {
   projects: Project[] = [
     {
       idP: 1,
-      projectImg: 'imgs/elpolloloco.png',
+      projectImg: 'imgs/elpolloloco.webP',
       title: 'PROJECTS.ELPOLLO.TITLE',
       description: 'PROJECTS.ELPOLLO.DESC',
       set: ['JavaScript', 'HTML', 'CSS'],
@@ -23,7 +23,7 @@ export class Works {
     },
     {
       idP: 2,
-      projectImg: 'imgs/pokedex.png',
+      projectImg: 'imgs/pokedex.webP',
       title: 'PROJECTS.POKEDEX.TITLE',
       description: 'PROJECTS.POKEDEX.DESC',
       set: ['JavaScript', 'API', 'HTML', 'CSS'],
