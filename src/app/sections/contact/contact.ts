@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   ReactiveFormsModule,
@@ -12,6 +12,15 @@ import {
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
+const dotAfterAtValidator: ValidatorFn = (control: AbstractControl): ValidationErrors | null => {
+  const v = String(control.value || '');
+  if (!v) return null; // "required" prüft Leerfeld
+  const at = v.indexOf('@');
+  if (at < 0) return null; // Grundschema übernimmt Validators.email
+  const domain = v.slice(at + 1);
+  return domain.includes('.') ? null : { dotAfterAt: true };
+};
+
 @Component({
   selector: 'app-contact',
   standalone: true,
@@ -23,7 +32,6 @@ export class Contact {
   form: FormGroup;
   success = false;
   error = false;
-
   nameFocused = false;
   emailFocused = false;
   messageFocused = false;
@@ -33,7 +41,10 @@ export class Contact {
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.maxLength(120)]],
-      email: ['', [Validators.required, Validators.email, Validators.maxLength(254)]],
+      email: [
+        '',
+        [Validators.required, Validators.email, dotAfterAtValidator, Validators.maxLength(254)],
+      ],
       message: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(5000)]],
       consent: [false, [Validators.requiredTrue]],
     });
