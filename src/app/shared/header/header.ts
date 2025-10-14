@@ -19,13 +19,11 @@ export class Header {
     return this.lang.get() === l;
   }
 
-  // Desktop: Sprache setzen
   setLang(e: Event, l: 'de' | 'en') {
     e.preventDefault();
     this.lang.set(l);
   }
 
-  // Overlay: Sprache setzen und schließen
   setLangAndClose(e: Event, l: 'de' | 'en') {
     e.preventDefault();
     this.lang.set(l);
