@@ -6,8 +6,11 @@
     </div>
     <div class="atf-right">
       <div class="atf-text">
-        <p>{{ 'ATF.HELLO' | translate }}</p>
-        <h1 id="intro-title" [innerHTML]="'ATF.TITLE' | translate"></h1>
+        <h1 id="intro-title">
+          <span class="atf-lead">{{ 'ATF.HELLO' | translate }}</span>
+          <br />
+          <span [innerHTML]="'ATF.TITLE' | translate"></span>
+        </h1>
       </div>
       <div class="atf-social-buttons" [attr.aria-label]="'ATF.SOCIAL_ARIA' | translate">
         <a href="https://github.com/codebySaschaHeinze" target="_blank" rel="noopener">

@@ -151,7 +151,7 @@
     }
   }
 
-  .atf-text p {
+  .atf-text h1 .atf-lead {
     font-family: 'Baloo 2';
     font-weight: 100;
     font-size: clamp(24px, 5vw, 58px);
@@ -307,7 +307,7 @@
   }
 
   .atf-section .atf-right .atf-text h1,
-  .atf-section .atf-right .atf-text p {
+  .atf-section .atf-right .atf-text .atf-lead {
     text-align: left;
     margin-left: 0;
   }
