@@ -16,7 +16,7 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
   overflow-y: clip;
@@ -82,7 +82,7 @@
     @media (max-width: 350px) {
       width: 239vw;
       height: auto;
-      top: -4%;
+      top: -10%;
       left: -145%;
     }
 
@@ -278,7 +278,7 @@
 
   .atf-text {
     color: white;
-    margin-top: -450px;
+    margin-top: -400px;
 
     h1,
     p {

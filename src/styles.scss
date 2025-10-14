@@ -30,6 +30,22 @@ body > app-root {
   max-width: none;
 }
 
+.hero,
+.atf {
+  min-height: 100vh;
+}
+
+@supports (min-height: 100svh) {
+  .hero,
+  .atf {
+    min-height: 100svh;
+  }
+}
+
+.fullscreen {
+  height: 100dvh;
+}
+
 @font-face {
   font-family: 'Baloo 2';
   src: url('/fonts/baloo-2-v23-latin-regular.woff2') format('woff2');
