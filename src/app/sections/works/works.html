@@ -3,6 +3,7 @@
     <h3>{{ 'WORKS.TITLE' | translate }}</h3>
     <p>{{ 'WORKS.INTRO' | translate }}</p>
   </div>
+
   <div class="works-container">
     @for (project of projects; track project.idP) {
     <div class="works-row" [class.reverse]="$index % 2 === 1">
@@ -17,6 +18,7 @@
           <img [src]="project.projectImg" [alt]="project.title | translate" />
         </a>
       </div>
+
       <div class="works-right">
         <h4>{{ project.title | translate }}</h4>
         <span>{{ project.set.join(' | ') }}</span>
@@ -45,6 +47,7 @@
     </div>
     }
   </div>
+
   <img class="big-ellipse ellipse1" src="icons/ellipse-blue-small.webP" alt="" />
   <img class="big-ellipse ellipse2" src="icons/ellipse-blue-small.webP" alt="" />
   <img class="big-ellipse ellipse3" src="icons/ellipse-blue-small.webP" alt="" />
