@@ -43,7 +43,14 @@ export class Works {
     },
   ];
 
-  openExternal(url?: string) {
+  /**
+   * Opens an external URL in a new browser tab.
+   * Uses `noopener` to prevent the opened page from accessing `window.opener`.
+   *
+   * @param {string} [url] - External URL to open. If no URL is provided,
+   * the function exits without performing any action.
+   */
+  openExternal(url?: string): void {
     if (!url) {
       return;
     }
@@ -51,6 +58,7 @@ export class Works {
   }
 
   links = {
+    join: 'https://join.saschaheinze.de',
     elpolloloco: 'https://elpolloloco.saschaheinze.de',
     pokedex: 'https://pokedex.saschaheinze.de',
   };
