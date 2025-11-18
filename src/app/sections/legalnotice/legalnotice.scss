@@ -7,42 +7,64 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-}
 
-h2 {
-  font-family: 'Baloo 2';
-  color: #5988ff;
-  font-size: clamp(23px, 6vw, 90px);
-  line-height: 0.9;
-  margin: 100px 0 50px 0;
-  z-index: 2;
-}
+  h1 {
+    font-family: 'Baloo 2';
+    color: #5988ff;
+    font-size: clamp(23px, 6vw, 90px);
+    line-height: 0.9;
+    margin: 100px 0 50px 0;
+    z-index: 2;
+  }
 
-h4 {
-  font-family: 'Montserrat', system-ui, sans-serif;
-  color: #5988ff;
-  font-size: 19px;
-  margin-top: 50px;
-  z-index: 2;
-}
+  h2 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: #5988ff;
+    font-size: 19px;
+    margin-top: 50px;
+    z-index: 2;
+  }
 
-p {
-  font-family: 'Montserrat', system-ui, sans-serif;
-  color: black;
-  font-size: 18px;
-  margin: 0 0 0 0;
-  z-index: 2;
-  white-space: normal;
-}
+  h3 {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: #5988ff;
+    font-size: 18px;
+    margin: 50px 0 14px 0;
+    z-index: 2;
+  }
 
-a {
-  text-decoration: none;
-  z-index: 2;
-  white-space: normal;
-  overflow-wrap: anywhere;
+  p {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: black;
+    font-size: 18px;
+    margin: 0 0 0 0;
+    z-index: 2;
+    white-space: normal;
+  }
 
-  &:hover {
-    text-decoration: underline;
+  a {
+    text-decoration: none;
+    z-index: 2;
+    white-space: normal;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  address {
+    font-style: normal;
+    display: block;
+
+    .legal-notice-address {
+      white-space: pre-line;
+      margin: 13px 0 0 0;
+    }
+
+    .phone {
+      margin: 13px 0 0 0;
+    }
   }
 }
 

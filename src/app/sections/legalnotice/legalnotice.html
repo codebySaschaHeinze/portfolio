@@ -1,32 +1,36 @@
-<section class="legal-notice-section" id="top">
-  <h2>{{ 'LEGALNOTICE.TITLE' | translate }}</h2>
+<section class="legal-notice-section" id="top" aria-labelledby="legal-notice-title">
+  <h1 id="legal-notice-title">
+    {{ 'LEGALNOTICE.TITLE' | translate }}
+  </h1>
+
   <p>{{ 'LEGALNOTICE.SUBTITLE' | translate }}</p>
 
-  <p style="white-space: pre-line; margin: 0">
-    {{ 'LEGALNOTICE.ADDRESS' | translate }}
-  </p>
-
-  <p>
-    <span>{{ 'LEGALNOTICE.CONTACT.PHONE_LABEL' | translate }}: </span>
-    <a href="tel:+4915141657089">+49 15141657089</a>
-  </p>
-  <p>
-    <span>{{ 'LEGALNOTICE.CONTACT.EMAIL_LABEL' | translate }}: </span>
-    <a href="mailto:kontakt@saschaheinze.de">kontakt@saschaheinze.de</a>
-  </p>
-  <p>
-    <span>{{ 'LEGALNOTICE.CONTACT.WEBSITE_LABEL' | translate }}: </span>
-    <a href="https://saschaheinze.de" target="_blank" rel="noopener noreferrer">
-      https://www.saschaheinze.de
-    </a>
-  </p>
+  <address class="legal-notice-contact">
+    <p class="legal-notice-address">
+      {{ 'LEGALNOTICE.ADDRESS' | translate }}
+    </p>
+    <p class="phone">
+      {{ 'LEGALNOTICE.CONTACT.PHONE_LABEL' | translate }}:
+      <a href="tel:+4915141657089">+49 151 41657089</a>
+    </p>
+    <p>
+      {{ 'LEGALNOTICE.CONTACT.EMAIL_LABEL' | translate }}:
+      <a href="mailto:kontakt@saschaheinze.de">kontakt@saschaheinze.de</a>
+    </p>
+    <p>
+      {{ 'LEGALNOTICE.CONTACT.WEBSITE_LABEL' | translate }}:
+      <a href="https://saschaheinze.de" target="_blank" rel="noopener noreferrer">
+        https://www.saschaheinze.de
+      </a>
+    </p>
+  </address>
 
   <h2>{{ 'LEGALNOTICE.DISCLAIMER.TITLE' | translate }}</h2>
 
-  <h4>{{ 'LEGALNOTICE.DISCLAIMER.CONTENT.LIABILITY_CONTENT.TITLE' | translate }}</h4>
+  <h3>{{ 'LEGALNOTICE.DISCLAIMER.CONTENT.LIABILITY_CONTENT.TITLE' | translate }}</h3>
   <p>{{ 'LEGALNOTICE.DISCLAIMER.CONTENT.LIABILITY_CONTENT.TEXT' | translate }}</p>
 
-  <h4>{{ 'LEGALNOTICE.DISCLAIMER.CONTENT.LIABILITY_LINKS.TITLE' | translate }}</h4>
+  <h3>{{ 'LEGALNOTICE.DISCLAIMER.CONTENT.LIABILITY_LINKS.TITLE' | translate }}</h3>
   <p>{{ 'LEGALNOTICE.DISCLAIMER.CONTENT.LIABILITY_LINKS.TEXT' | translate }}</p>
 
   <h2>{{ 'LEGALNOTICE.COPYRIGHT.TITLE' | translate }}</h2>
