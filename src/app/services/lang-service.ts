@@ -24,7 +24,7 @@ export class LangService {
   constructor(private readonly t: TranslateService, @Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
     this.t.addLangs(['de', 'en']);
-    this.t.setDefaultLang('de');
+    this.t.use('de');
     this.current = 'de';
   }
 
