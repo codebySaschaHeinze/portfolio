@@ -8,6 +8,7 @@
       <span>{{ 'CONTACT.PROMO2' | translate }}</span>
     </div>
   </div>
+
   <form class="contact-right" [formGroup]="form" (submit)="onSubmit($event)">
     <input
       type="text"
@@ -16,6 +17,7 @@
       autocomplete="off"
       style="position: absolute; left: -9999px; opacity: 0"
     />
+
     <div class="field">
       <input
         name="name"
@@ -28,8 +30,9 @@
         [attr.aria-invalid]="nameCtrl.invalid"
         [attr.aria-describedby]="nameCtrl.invalid && nameFocused ? 'name-error' : null"
       />
+
+      @if (nameCtrl.invalid && nameFocused) {
       <img
-        *ngIf="nameCtrl.invalid && nameFocused"
         class="field-icon is-error"
         src="/icons/exklamation-mark.png"
         width="25"
@@ -37,8 +40,8 @@
         alt=""
         aria-hidden="true"
       />
+      } @if (nameCtrl.valid && nameFocused) {
       <img
-        *ngIf="nameCtrl.valid && nameFocused"
         class="field-icon is-valid"
         src="/icons/check-mark.png"
         width="25"
@@ -46,15 +49,15 @@
         alt=""
         aria-hidden="true"
       />
+      }
     </div>
-    <p
-      *ngIf="nameCtrl.invalid && nameFocused"
-      id="name-error"
-      class="field-error"
-      aria-live="polite"
-    >
+
+    @if (nameCtrl.invalid && nameFocused) {
+    <p id="name-error" class="field-error" aria-live="polite">
       {{ 'CONTACT.ERROR_NAME' | translate }}
     </p>
+    }
+
     <div class="field">
       <input
         name="email"
@@ -67,8 +70,9 @@
         [attr.aria-invalid]="emailCtrl.invalid"
         [attr.aria-describedby]="emailCtrl.invalid && emailFocused ? 'email-error' : null"
       />
+
+      @if (emailCtrl.invalid && emailFocused) {
       <img
-        *ngIf="emailCtrl.invalid && emailFocused"
         class="field-icon is-error"
         src="/icons/exklamation-mark.png"
         width="25"
@@ -76,8 +80,8 @@
         alt=""
         aria-hidden="true"
       />
+      } @if (emailCtrl.valid && emailFocused) {
       <img
-        *ngIf="emailCtrl.valid && emailFocused"
         class="field-icon is-valid"
         src="/icons/check-mark.png"
         width="25"
@@ -85,15 +89,15 @@
         alt=""
         aria-hidden="true"
       />
+      }
     </div>
-    <p
-      *ngIf="emailCtrl.invalid && emailFocused"
-      id="email-error"
-      class="field-error"
-      aria-live="polite"
-    >
+
+    @if (emailCtrl.invalid && emailFocused) {
+    <p id="email-error" class="field-error" aria-live="polite">
       {{ 'CONTACT.ERROR_EMAIL' | translate }}
     </p>
+    }
+
     <div class="field">
       <textarea
         #msgInput
@@ -106,8 +110,9 @@
         [attr.aria-invalid]="messageCtrl.invalid"
         [attr.aria-describedby]="messageCtrl.invalid && messageFocused ? 'msg-error' : null"
       ></textarea>
+
+      @if (messageCtrl.invalid && messageFocused) {
       <img
-        *ngIf="messageCtrl.invalid && messageFocused"
         class="field-icon is-error"
         src="/icons/exklamation-mark.png"
         width="25"
@@ -115,8 +120,8 @@
         alt=""
         aria-hidden="true"
       />
+      } @if (messageCtrl.valid && messageFocused) {
       <img
-        *ngIf="messageCtrl.valid && messageFocused"
         class="field-icon is-valid"
         src="/icons/check-mark.png"
         width="25"
@@ -124,15 +129,15 @@
         alt=""
         aria-hidden="true"
       />
+      }
     </div>
-    <p
-      *ngIf="messageCtrl.invalid && messageFocused"
-      id="msg-error"
-      class="field-error"
-      aria-live="polite"
-    >
+
+    @if (messageCtrl.invalid && messageFocused) {
+    <p id="msg-error" class="field-error" aria-live="polite">
       {{ 'CONTACT.ERROR_MSG' | translate }}
     </p>
+    }
+
     <div class="contact-right-check-box">
       <input type="checkbox" id="contact-check-box" formControlName="consent" />
       <label for="contact-check-box" class="consent">
@@ -143,10 +148,13 @@
         {{ 'CONTACT.CONSENT_SUFFIX' | translate }}
       </label>
     </div>
+
     <button type="submit" [disabled]="form.invalid">
       {{ 'CONTACT.BUTTON' | translate }}
     </button>
-    <div class="overlay success" *ngIf="success" (click)="success = false" aria-live="polite">
+
+    @if (success) {
+    <div class="overlay success" (click)="success = false" aria-live="polite">
       <div class="overlay-box" (click)="$event.stopPropagation()">
         <p>{{ 'CONTACT.SUCCESS' | translate }}</p>
         <button type="button" class="btn" (click)="success = false">
@@ -154,7 +162,8 @@
         </button>
       </div>
     </div>
-    <div class="overlay error" *ngIf="error" (click)="error = false" aria-live="polite">
+    } @if (error) {
+    <div class="overlay error" (click)="error = false" aria-live="polite">
       <div class="overlay-box" (click)="$event.stopPropagation()">
         <p>{{ 'CONTACT.ERROR' | translate }}</p>
         <button type="button" class="btn" (click)="error = false">
@@ -162,7 +171,9 @@
         </button>
       </div>
     </div>
+    }
   </form>
+
   <img class="big-ellipse ellipse1" src="icons/ellipse-blue-small.webP" alt="" />
   <img class="big-ellipse ellipse2" src="icons/ellipse-blue-small.webP" alt="" />
   <img class="big-ellipse ellipse3" src="icons/ellipse-blue-small.webP" alt="" />
