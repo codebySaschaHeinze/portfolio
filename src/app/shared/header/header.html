@@ -34,13 +34,9 @@
     </nav>
   </div>
 </header>
-<div
-  class="header-overlay"
-  *ngIf="isOverlayOpen"
-  (click)="closeOverlay()"
-  role="dialog"
-  aria-modal="true"
->
+
+@if (isOverlayOpen) {
+<div class="header-overlay" (click)="closeOverlay()" role="dialog" aria-modal="true">
   <div class="overlay-inner" (click)="$event.stopPropagation()">
     <div class="overlay-top">
       <a class="logo" href="/">
@@ -55,9 +51,15 @@
       </button>
     </div>
     <nav class="overlay-nav" aria-label="Overlay Navigation">
-      <a href="#about" (click)="closeOverlay()">{{ 'HEADER.LINKS.ABOUT' | translate }}</a>
-      <a href="#skills" (click)="closeOverlay()">{{ 'HEADER.LINKS.SKILLS' | translate }}</a>
-      <a href="#works" (click)="closeOverlay()">{{ 'HEADER.LINKS.WORKS' | translate }}</a>
+      <a href="#about" (click)="closeOverlay()">
+        {{ 'HEADER.LINKS.ABOUT' | translate }}
+      </a>
+      <a href="#skills" (click)="closeOverlay()">
+        {{ 'HEADER.LINKS.SKILLS' | translate }}
+      </a>
+      <a href="#works" (click)="closeOverlay()">
+        {{ 'HEADER.LINKS.WORKS' | translate }}
+      </a>
       <div class="overlay-lang" aria-label="Sprachauswahl">
         <a href="#" [class.active]="is('de')" (click)="setLangAndClose($event, 'de')">DE</a>
         <span class="sep">/</span>
@@ -66,3 +68,4 @@
     </nav>
   </div>
 </div>
+}
