@@ -201,7 +201,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'Montserrat', system-ui, sans-serif;
-    font-size: clamp(16px, calc(16px + 7px * (100vw / 390px)), 23px);
+    font-size: clamp(16px, 4.8vw, 33px);
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -251,7 +251,7 @@
       color: #0043f0;
       opacity: 0.95;
       font-family: 'Montserrat', system-ui, sans-serif;
-      font-size: clamp(16px, calc(16px + 7px * (100vw / 390px)), 23px);
+      font-size: clamp(16px, 4.8vw, 33px);
       display: inline-flex;
       align-items: center;
     }
