@@ -125,6 +125,10 @@
     display: flex;
     justify-content: flex-start;
     margin-top: 150px;
+
+    @media (max-width: 1090px) {
+      margin-top: 88px;
+    }
   }
 
   .atf-text {
