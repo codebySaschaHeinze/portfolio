@@ -51,6 +51,10 @@
   },
 
   "PROJECTS": {
+    "JOIN": {
+      "TITLE": "Join",
+      "DESC": "Join ist ein webbasiertes Kanban-Board, mit dem man Aufgaben erstellen, organisieren und verwalten kann. Nutzer können Tasks anlegen, ihnen Kontakte zuweisen, Statusspalten wechseln, Fristen setzen und Notizen hinzufügen. Alles läuft über ein Login-System mit Firebase, sodass persönliche Aufgaben und Boards sicher gespeichert werden."
+    },
     "ELPOLLO": {
       "TITLE": "El Pollo Loco",
       "DESC": "El Pollo Loco ist ein Jump-and-Run-Spiel im Browser, bei dem man eine Figur steuert, Münzen und Flaschen sammelt und Hühner als Gegner hat. Am Ende wartet ein großer Endboss, den man mit den gesammelten Flaschen besiegen muss."
@@ -88,10 +92,10 @@
     "ARIA": "Testimonials",
     "PROJECT_PREFIX": "Projekt",
     "KOCHWELT": "Kochwelt",
-    "BEACHAPP": "BeachApp",
+    "JOIN": "Join",
     "DANIEL": "Mit Sascha zu arbeiten macht Spaß, weil er Kreativität mit Struktur verbindet. Er behält auch in stressigen Phasen den Überblick und motiviert das Team, das Beste aus jedem Projekt herauszuholen.",
     "PATRICK": "Sascha brachte in Teamarbeiten dank seiner kreativen Impulse, seiner Konzentrationsstärke und seines breiten Wissens einen besonderen Mehrwert ein.",
-    "DAVID": "Das ist ein Platzhalter! Die Zusammenarbeit war angenehm und professionell. Aufgaben wurden zuverlässig umgesetzt und das gemeinsame Ergebnis konnte sich sehen lassen."
+    "MANUEL": "Sascha verbindet technisches Verständnis mit klarer Struktur. Auch bei komplexen Aufgaben behält er den Überblick und motiviert das Team. Seine analytische Arbeitsweise sorgt für effizienten Fortschritt und eine angenehme Zusammenarbeit."
   },
 
   "FOOTER": {

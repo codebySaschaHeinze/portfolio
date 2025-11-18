@@ -13,6 +13,16 @@ export class Works {
   projects: Project[] = [
     {
       idP: 1,
+      projectImg: 'imgs/join.webP',
+      title: 'PROJECTS.JOIN.TITLE',
+      description: 'PROJECTS.JOIN.DESC',
+      set: ['Angular', 'Firebase', 'TypeScript', 'HTML', 'SCSS'],
+      github: 'GitHub',
+      githubLink: 'https://github.com/codebySaschaHeinze/join.git',
+      liveLink: 'https://join.saschaheinze.de',
+    },
+    {
+      idP: 2,
       projectImg: 'imgs/elpolloloco.webP',
       title: 'PROJECTS.ELPOLLO.TITLE',
       description: 'PROJECTS.ELPOLLO.DESC',
@@ -22,7 +32,7 @@ export class Works {
       liveLink: 'https://elpolloloco.saschaheinze.de',
     },
     {
-      idP: 2,
+      idP: 3,
       projectImg: 'imgs/pokedex.webP',
       title: 'PROJECTS.POKEDEX.TITLE',
       description: 'PROJECTS.POKEDEX.DESC',

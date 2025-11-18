@@ -13,21 +13,21 @@ export class Testimonials {
   testimonials: Testimonial[] = [
     {
       idT: 1,
+      nameT: 'Manuel Giehl',
+      projectKey: 'TESTIMONIALS.JOIN',
+      textKey: 'TESTIMONIALS.MANUEL',
+    },
+    {
+      idT: 2,
       nameT: 'Daniel Luzius',
       projectKey: 'TESTIMONIALS.KOCHWELT',
       textKey: 'TESTIMONIALS.DANIEL',
     },
     {
-      idT: 2,
+      idT: 3,
       nameT: 'Patrick Schmidt',
       projectKey: 'TESTIMONIALS.KOCHWELT',
       textKey: 'TESTIMONIALS.PATRICK',
-    },
-    {
-      idT: 3,
-      nameT: 'David Hasselhoff',
-      projectKey: 'TESTIMONIALS.BEACHAPP',
-      textKey: 'TESTIMONIALS.DAVID',
     },
   ];
 }
