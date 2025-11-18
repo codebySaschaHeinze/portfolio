@@ -55,7 +55,7 @@
   .ellipse4 {
     width: 652px;
     height: 652px;
-    top: 930px;
+    top: 800px;
     right: -800px;
     z-index: -1;
   }
@@ -74,12 +74,6 @@
     height: 238px;
     top: 1850px;
     left: 400px;
-  }
-  .ellipse7 {
-    width: 96px;
-    height: 96px;
-    top: 1900px;
-    right: 200px;
   }
 
   .works-container {
@@ -269,16 +263,12 @@
       left: 230px;
     }
     .ellipse4 {
-      top: 730px;
+      top: 570px;
       right: -1000px;
     }
     .ellipse6 {
       top: 2300px;
       left: 120px;
-    }
-    .ellipse7 {
-      top: 3350px;
-      right: 200px;
     }
 
     .works-container {
@@ -347,12 +337,13 @@
     }
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 980px) {
     .ellipse1 {
       left: 90%;
     }
     .ellipse4 {
-      right: -1100px;
+      right: -1140px;
+      top: 455px;
     }
   }
 
