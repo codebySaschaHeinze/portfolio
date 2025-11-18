@@ -129,6 +129,22 @@
     @media (max-width: 1090px) {
       margin-top: 88px;
     }
+
+    @media (max-height: 800px) {
+      top: 45px;
+    }
+
+    @media (max-height: 720px) {
+      top: 60px;
+    }
+
+    @media (max-height: 670px) {
+      top: 90px;
+    }
+
+    @media (max-width: 350px) {
+      top: 80px;
+    }
   }
 
   .atf-text {
