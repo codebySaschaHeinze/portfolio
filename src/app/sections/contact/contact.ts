@@ -11,16 +11,7 @@ import {
 } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-
-/**
- * Shape of the payload sent to the contact API.
- */
-interface ContactPayload {
-  name: string;
-  email: string;
-  message: string;
-  website: string;
-}
+import { ContactPayload } from './../../interfaces/interfaces';
 
 /**
  * Validates that the email domain part (after "@") contains at least one dot.
@@ -136,7 +127,12 @@ export class Contact {
    */
   async onSubmit(event: Event): Promise<void> {
     event.preventDefault();
-    if (this.form.invalid) return;
+
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
+
     const payload = this.buildPayload();
     await this.sendContactRequest(payload);
   }
@@ -149,7 +145,6 @@ export class Contact {
       name: String(this.nameCtrl.value ?? ''),
       email: String(this.emailCtrl.value ?? ''),
       message: String(this.messageCtrl.value ?? ''),
-      website: '',
     };
   }
 

@@ -20,3 +20,9 @@ export interface Testimonial {
   projectKey: string;
   textKey: string;
 }
+
+export interface ContactPayload {
+  name: string;
+  email: string;
+  message: string;
+}
