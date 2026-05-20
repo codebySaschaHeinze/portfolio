@@ -61,6 +61,14 @@
     "POKEDEX": {
       "TITLE": "PokeDex",
       "DESC": "The Pokedex is a web app that displays Pokémon with images, names, and details such as type or abilities. Data is loaded via the PokéAPI and clearly presented in card form."
+    },
+    "VIDEOFLIX": {
+      "TITLE": "Videoflix",
+      "DESC": "Videoflix is a Netflix-inspired streaming platform. The project includes user registration, login, email activation, password reset, and the management and delivery of video content through a Django backend."
+    },
+    "CODERR": {
+      "TITLE": "Coderr",
+      "DESC": "Coderr is a platform for digital services. Users can create offers, manage orders, and leave reviews. The backend is built with Django REST Framework and includes roles, permissions, and structured API endpoints."
     }
   },
 

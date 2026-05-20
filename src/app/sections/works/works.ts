@@ -13,6 +13,26 @@ export class Works {
   projects: Project[] = [
     {
       idP: 1,
+      projectImg: 'imgs/videoflix.webP',
+      title: 'PROJECTS.VIDEOFLIX.TITLE',
+      description: 'PROJECTS.VIDEOFLIX.DESC',
+      set: ['Django', 'REST API', 'Python', 'Angular', 'TypeScript', 'Docker'],
+      github: 'GitHub',
+      githubLink: 'https://github.com/codebySaschaHeinze/videoflix-backend.git',
+      liveLink: 'https://videoflix.saschaheinze.de',
+    },
+    {
+      idP: 2,
+      projectImg: 'imgs/coderr.webP',
+      title: 'PROJECTS.CODERR.TITLE',
+      description: 'PROJECTS.CODERR.DESC',
+      set: ['Django', 'REST API', 'Python', 'Angular', 'TypeScript', 'Docker'],
+      github: 'GitHub',
+      githubLink: 'https://github.com/codebySaschaHeinze/coderr-backend.git',
+      liveLink: 'https://www.coderr.saschaheinze.de',
+    },
+    {
+      idP: 3,
       projectImg: 'imgs/join.webP',
       title: 'PROJECTS.JOIN.TITLE',
       description: 'PROJECTS.JOIN.DESC',
@@ -22,7 +42,17 @@ export class Works {
       liveLink: 'https://join.saschaheinze.de',
     },
     {
-      idP: 2,
+      idP: 4,
+      projectImg: 'imgs/pokedex.webP',
+      title: 'PROJECTS.POKEDEX.TITLE',
+      description: 'PROJECTS.POKEDEX.DESC',
+      set: ['JavaScript', 'REST API', 'HTML', 'CSS'],
+      github: 'GitHub',
+      githubLink: 'https://github.com/codebySaschaHeinze/PokeDex.git',
+      liveLink: 'https://pokedex.saschaheinze.de',
+    },
+    {
+      idP: 5,
       projectImg: 'imgs/elpolloloco.webP',
       title: 'PROJECTS.ELPOLLO.TITLE',
       description: 'PROJECTS.ELPOLLO.DESC',
@@ -30,16 +60,6 @@ export class Works {
       github: 'GitHub',
       githubLink: 'https://github.com/codebySaschaHeinze/el-pollo-loco.git',
       liveLink: 'https://elpolloloco.saschaheinze.de',
-    },
-    {
-      idP: 3,
-      projectImg: 'imgs/pokedex.webP',
-      title: 'PROJECTS.POKEDEX.TITLE',
-      description: 'PROJECTS.POKEDEX.DESC',
-      set: ['JavaScript', 'API', 'HTML', 'CSS'],
-      github: 'GitHub',
-      githubLink: 'https://github.com/codebySaschaHeinze/PokeDex.git',
-      liveLink: 'https://pokedex.saschaheinze.de',
     },
   ];
 
