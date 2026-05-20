@@ -108,7 +108,7 @@
 
   "LEGALNOTICE": {
     "TITLE": "Impressum",
-    "SUBTITLE": "Angaben gemäß § 5 TMG",
+    "SUBTITLE": "Angaben gemäß § 5 DDG",
     "ADDRESS": "Sascha Heinze\nEckhoffplatz 34\n22547 Hamburg",
     "CONTACT": {
       "PHONE_LABEL": "Telefon",
@@ -145,8 +145,7 @@
     },
     "HOSTING": {
       "TITLE": "Hosting",
-      "TEXT": "Meine Website wird bei IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland, gehostet. IONOS verarbeitet personenbezogene Daten (z. B. Server-Logfiles), um den sicheren und stabilen Betrieb der Website zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung der Website).",
-      "LINK_TEXT": "Datenschutzerklärung von GitHub"
+      "TEXT": "Meine Website wird bei IONOS SE, Elgendorfer Str. 57, 56410 Montabaur, Deutschland, gehostet. IONOS verarbeitet personenbezogene Daten (z. B. Server-Logfiles), um den sicheren und stabilen Betrieb der Website zu gewährleisten. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der sicheren Bereitstellung der Website)."
     },
     "ACCESS_DATA": {
       "TITLE": "Zugriffsdaten",
