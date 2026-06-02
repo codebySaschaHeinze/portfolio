@@ -16,12 +16,6 @@ if ($origin && parse_url($origin, PHP_URL_HOST) === $host) {
 
 $ip   = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 $rate = sys_get_temp_dir() . '/cf_' . md5($ip);
-if (file_exists($rate) && (time() - filemtime($rate)) < 30) {
-  http_response_code(429);
-  echo json_encode(['ok'=>false,'error'=>'too_many_requests']);
-  exit;
-}
-touch($rate);
 
 $raw  = file_get_contents('php://input');
 $data = json_decode($raw, true);
@@ -43,6 +37,13 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
   echo json_encode(['ok'=>false,'error'=>'email']);
   exit;
 }
+
+if (file_exists($rate) && (time() - filemtime($rate)) < 30) {
+  http_response_code(429);
+  echo json_encode(['ok'=>false,'error'=>'too_many_requests']);
+  exit;
+}
+touch($rate);
 
 $to      = 'kontakt@saschaheinze.de';        
 $from    = 'kontakt@saschaheinze.de';        
