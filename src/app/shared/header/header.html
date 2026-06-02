@@ -25,10 +25,10 @@
       <div class="burger-menu">
         <button
           class="burger-button"
-          [attr.aria-label]="'HEADER.CLOSE_MENU' | translate"
+          [attr.aria-label]="'HEADER.OPEN_MENU' | translate"
           (click)="toggleOverlay()"
         >
-          <img src="/icons/burger.png" [alt]="'HEADER.BURGER_ALT_CLOSE' | translate" />
+          <img src="/icons/burger.png" [alt]="'HEADER.BURGER_ALT_OPEN' | translate" />
         </button>
       </div>
     </nav>
@@ -44,10 +44,10 @@
       </a>
       <button
         class="overlay-close"
-        [attr.aria-label]="'HEADER.BURGER.CLOSE' | translate"
+        [attr.aria-label]="'HEADER.CLOSE_MENU' | translate"
         (click)="toggleOverlay()"
       >
-        <img src="/icons/burger.png" [alt]="'HEADER.BURGER.CLOSE' | translate" />
+        <img src="/icons/burger.png" [alt]="'HEADER.BURGER_ALT_CLOSE' | translate" />
       </button>
     </div>
     <nav class="overlay-nav" aria-label="Overlay Navigation">
