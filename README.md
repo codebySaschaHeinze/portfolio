@@ -1,59 +1,74 @@
-# Portfolio
+# Sascha Heinze Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+This repository contains my personal developer portfolio. The website presents my
+projects, technical skills, live demos, GitHub links, and contact options in a
+clear and responsive interface.
 
-## Development server
+## Live Demo
 
-To start a local development server, run:
+[https://saschaheinze.de](https://saschaheinze.de)
 
-```bash
-ng serve
-```
+## Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 20
+- TypeScript
+- SCSS
+- Angular Router
+- Angular Reactive Forms
+- Angular SSR with Express
+- ngx-translate
+- RxJS
+- PHP contact endpoint
 
-## Code scaffolding
+## Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Project overview with descriptions, technology tags, preview images, live demo links, and GitHub links
+- Skills section with visual technology icons
+- About section with a short personal introduction
+- Testimonials section
+- Contact form with client-side validation and consent checkbox
+- Multilingual content in German and English
+- Responsive layout for desktop, tablet, and mobile viewports
+- Legal notice and privacy policy pages
+- Local fonts and static assets served from the project
 
-```bash
-ng generate component component-name
-```
+## Local Setup
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Make sure Node.js and npm are installed on your machine.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Install dependencies:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Start the development server:
 
 ```bash
-ng e2e
+npm run start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The application is usually available at:
 
-## Additional Resources
+```text
+http://localhost:4200
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Build the project:
+
+```bash
+npm run build
+```
+
+The production build is generated in the `dist/` directory.
+
+Run unit tests:
+
+```bash
+npm run test
+```
+
+## Project Status
+
+This portfolio is actively maintained. New projects, content updates, and UI
+refinements will be added as my work continues to evolve.
